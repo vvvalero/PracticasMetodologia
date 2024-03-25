@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4273e11-87a6-49cb-bc32-18280de360b4" name="Changes" comment="He creado el main y configurado el pom.xml y el Maven, si falta algo añadirlo">
-      <change afterPath="$PROJECT_DIR$/src/test/java/MudanzasMainTests.java" afterDir="false" />
-    </list>
+    <list default="true" id="f4273e11-87a6-49cb-bc32-18280de360b4" name="Changes" comment="He creado la clase test y hecho uno de prueba" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,9 +20,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2eBzYS0EqNblHT6th2DdM5JZ3rn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -36,7 +34,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -74,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1711392806547</updated>
-      <workItem from="1711392807663" duration="892000" />
+      <workItem from="1711392807663" duration="1272000" />
     </task>
     <task id="LOCAL-00001" summary="He creado el main y configurado el pom.xml y el Maven, si falta algo añadirlo">
       <option name="closed" value="true" />
@@ -84,7 +82,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711393498945</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="He creado la clase test y hecho uno de prueba">
+      <option name="closed" value="true" />
+      <created>1711393759345</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711393759345</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,6 +109,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="He creado el main y configurado el pom.xml y el Maven, si falta algo añadirlo" />
-    <option name="LAST_COMMIT_MESSAGE" value="He creado el main y configurado el pom.xml y el Maven, si falta algo añadirlo" />
+    <MESSAGE value="He creado la clase test y hecho uno de prueba" />
+    <option name="LAST_COMMIT_MESSAGE" value="He creado la clase test y hecho uno de prueba" />
   </component>
 </project>
