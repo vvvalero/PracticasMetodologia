@@ -8,8 +8,7 @@ public class MudanzasMain {
 
     public static float dameEspacioCamion(){
         System.out.println("Introduzca peso máximo que se podrá cargar en el camión: ");
-        float espacio = scanner.nextFloat();
-        return espacio;
+        return scanner.nextFloat();
     }
     public static float [] dameObjetos(){
         float [] objetos = new float[100];
@@ -28,7 +27,7 @@ public class MudanzasMain {
     public static void main(String[] args) {
         float espacio = dameEspacioCamion();
         float [] objetos = dameObjetos();
-        voraz(objetos, espacio);
+        System.out.println(Arrays.toString(voraz(objetos, espacio)));
     }
     public static float [] voraz(float [] objetos, float pmaximo){
         Arrays.sort(objetos);
@@ -42,7 +41,7 @@ public class MudanzasMain {
             x = seleccionar(objetos,i);
             if(factible(pmaximo,x,pactual)) {
                 pactual = pactual + x;
-                sol[tam-i] = x;
+                sol[i] = x;
             }
             i++;
         }
