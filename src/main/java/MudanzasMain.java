@@ -1,7 +1,4 @@
-import java.util.Collections;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.Scanner;
+import java.util.*;
 
 public class MudanzasMain {
     private static Scanner scanner = new Scanner(System.in);
@@ -33,7 +30,7 @@ public class MudanzasMain {
         Arrays.sort(objetos);
         int tam = objetos.length;
         float pactual=0; //Para saber el peso acumulado
-        float [] sol = new float[100];
+        float [] sol = new float[tam];
         float x;
         int i=0;
         //Bucle voraz:
@@ -48,6 +45,8 @@ public class MudanzasMain {
         return sol;
     }
     public static boolean esSolucion(int i,float pmaximo,float pactual,int tam){
+        if (pactual > pmaximo)
+            throw new RuntimeException("Peso maximo superado");
         //será solución cuando no haya mas pesos o cuando se haya llenado
         return pactual == pmaximo || i == tam;
     }
@@ -59,4 +58,5 @@ public class MudanzasMain {
         float x = objetos[i];
         return x;
     }
+
 }
