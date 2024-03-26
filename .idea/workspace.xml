@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4273e11-87a6-49cb-bc32-18280de360b4" name="Changes" comment="Cambios en el metodo voraz, lo he cambiado a un array de Floats en vez de un Arraylist, para mayor facilidad creo que así sería mejor. He añadido un main y algunos metodos a implementar.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MudanzasMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MudanzasMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
