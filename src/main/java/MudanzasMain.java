@@ -4,16 +4,15 @@ import java.util.Iterator;
 
 public class MudanzasMain {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        System.out.println("MudanzasVoraces");
     }
-    ArrayList<float> voraz(ArrayList<Float> pesos, float capacidad, float precio){
-        float pactual=0;
+    ArrayList<float> voraz(ArrayList<Float> pesos, float capacidad){
+        float pactual = 0,aux;
+        ArrayList<float> sol=new ArrayList<float>();
         Collections.sort(pesos);
         Iterator<Float> it = pesos.iterator();
-        ArrayList<float> sol=null;
-        float aux;
-        //Bucle voraz:
-        while(pactual<capacidad && it.hasNext()){
+
+        while(pactual < capacidad && it.hasNext()){
             aux=it.next();
             if(aux <= capacidad - pactual)
                 sol.add(aux);

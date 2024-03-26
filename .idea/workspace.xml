@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4273e11-87a6-49cb-bc32-18280de360b4" name="Changes" comment="Clase voraz para hacer el algoritmo">
+    <list default="true" id="f4273e11-87a6-49cb-bc32-18280de360b4" name="Changes" comment="Uso de Iterador y ArrayList. Falta el precio">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MudanzasMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MudanzasMain.java" afterDir="false" />
     </list>
@@ -79,7 +79,8 @@
       <option name="presentableId" value="Default" />
       <updated>1711392806547</updated>
       <workItem from="1711392807663" duration="1272000" />
-      <workItem from="1711394707366" duration="1692000" />
+      <workItem from="1711394707366" duration="1976000" />
+      <workItem from="1711414116250" duration="1594000" />
     </task>
     <task id="LOCAL-00001" summary="He creado el main y configurado el pom.xml y el Maven, si falta algo añadirlo">
       <option name="closed" value="true" />
@@ -125,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711395285123</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Uso de Iterador y ArrayList. Falta el precio">
+      <created>1711396560928</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1711396560928</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +156,7 @@
     <MESSAGE value="metodo voraz" />
     <MESSAGE value="He creado la clase test y hecho uno de prueba" />
     <MESSAGE value="Clase voraz para hacer el algoritmo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Clase voraz para hacer el algoritmo" />
+    <MESSAGE value="Uso de Iterador y ArrayList. Falta el precio" />
+    <option name="LAST_COMMIT_MESSAGE" value="Uso de Iterador y ArrayList. Falta el precio" />
   </component>
 </project>
