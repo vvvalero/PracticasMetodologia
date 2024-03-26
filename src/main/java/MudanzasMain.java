@@ -34,20 +34,23 @@ public class MudanzasMain {
         Arrays.sort(objetos);
         int auxiliar = objetos.length;
         float [] sol;
+        float x;
         if(objetos[i])
         //Bucle voraz:
         while(objetos.length<auxiliar && !esSolucion()){
+            x = seleccionar(objetos);
         }
         return sol;
     }
-    public boolean esSolucion(){
+    public static boolean esSolucion(){
 
     }
-    public boolean factible(int espacio, float objetoActual,float pesoAcumuladoActual){
+    public static boolean factible(int espacio, float objetoActual,float pesoAcumuladoActual){
         return espacio >= pesoAcumuladoActual + objetoActual;
         //será factible únicamente si cabe aún en el camión
     }
-    public void seleccionar(){
-
+    public static float seleccionar(float[] objetos){
+        float x = objetos[1];
+        return x;
     }
 }
