@@ -41,7 +41,7 @@ public class MudanzasMainList {
     }
 
     public static float seleccionar(ArrayList<Float> pesos,Iterator<Float> it){
-        return it.next();
+        return it.next(); //it.next() hace avanzar el iterador una posicion y devuelve el elemento en esta nueva posicion
     }
 
     public static ArrayList<Float> voraz(ArrayList<Float> pesos, float capacidad) {
@@ -49,8 +49,9 @@ public class MudanzasMainList {
         ArrayList<Float> sol=new ArrayList<>();
         Collections.sort(pesos);
         Iterator<Float> it = pesos.iterator();
+        //El iterador empieza en el principio el array y lo vamos moviendo hacia el final con it.next();
 
-        while(!esSolucion(capacidad,pactual) && it.hasNext()){
+        while(!esSolucion(capacidad,pactual) && it.hasNext()){ //it.hasNext devuelve True solo si hay mas elementos despues del actual
             aux=seleccionar(pesos,it);
             if(factible(capacidad,aux,pactual)) {
                 sol.add(aux);
