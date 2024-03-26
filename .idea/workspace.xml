@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4273e11-87a6-49cb-bc32-18280de360b4" name="Changes" comment="Clase voraz para hacer el algoritmo">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MudanzasMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MudanzasMain.java" afterDir="false" />
-    </list>
+    <list default="true" id="f4273e11-87a6-49cb-bc32-18280de360b4" name="Changes" comment="Hecho método dameEspacioCamión" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -125,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711395285123</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Hecho método dameEspacioCamión">
+      <created>1711465196685</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1711465196685</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +152,8 @@
     <MESSAGE value="metodo voraz" />
     <MESSAGE value="He creado la clase test y hecho uno de prueba" />
     <MESSAGE value="Clase voraz para hacer el algoritmo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Clase voraz para hacer el algoritmo" />
+    <MESSAGE value="Cambios en el metodo voraz, lo he cambiado a un array de Floats en vez de un Arraylist, para mayor facilidad creo que así sería mejor. He añadido un main y algunos metodos a implementar." />
+    <MESSAGE value="Hecho método dameEspacioCamión" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hecho método dameEspacioCamión" />
   </component>
 </project>
