@@ -1,14 +1,25 @@
-import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Arrays;
 import java.util.Iterator;
+import java.util.Scanner;
 
 public class MudanzasMain {
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
+    private static Scanner scanner = new Scanner(System.in);
+
+    public static int dameEspacioCamion(){
+    //metodo para indicarle al programa la capacidad en el camion
     }
-    ArrayList<float> voraz(ArrayList<Float> pesos, float capacidad, float precio){
+    public static float [] dameObjetos(){
+    //metodo para indicarle al programa el array de objetos a introducir en el programa
+    }
+    public static void main(String[] args) {
+        int espacio = dameEspacioCamion();
+        float [] objetos = dameObjetos();
+        voraz(objetos, espacio);
+    }
+    public static void voraz(float [] objetos, int capacidad){
         float pactual=0;
-        Collections.sort(pesos);
+        Arrays.sort(objetos);
         Iterator<Float> it = pesos.iterator();
         ArrayList<float> sol=null;
         float aux;
