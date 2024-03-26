@@ -7,10 +7,13 @@ public class MudanzasMain {
     private static Scanner scanner = new Scanner(System.in);
 
     public static int dameEspacioCamion(){
-    //metodo para indicarle al programa la capacidad en el camion
+        System.out.println("Introduzca peso máximo que se podrá cargar en el camión: ");
+        int i = scanner.nextInt();
+        return i;
     }
     public static float [] dameObjetos(){
-    //metodo para indicarle al programa el array de objetos a introducir en el programa
+        System.out.println("Introduzca el peso individual de cada objeto que se quiere introducir: ");
+
     }
     public static void main(String[] args) {
         int espacio = dameEspacioCamion();
