@@ -40,7 +40,7 @@ public class MudanzasMainList {
         //será factible únicamente si cabe aún en el camión
     }
 
-    public static float seleccionar(ArrayList<Float> pesos,Iterator<Float> it){
+    public static float seleccionar(Iterator<Float> it){
         return it.next(); //it.next() hace avanzar el iterador una posicion y devuelve el elemento en esta nueva posicion
     }
 
@@ -52,7 +52,7 @@ public class MudanzasMainList {
         //El iterador empieza en el principio el array y lo vamos moviendo hacia el final con it.next();
 
         while(!esSolucion(capacidad,pactual) && it.hasNext()){ //it.hasNext devuelve True solo si hay mas elementos despues del actual
-            aux=seleccionar(pesos,it);
+            aux=seleccionar(it);
             if(factible(capacidad,aux,pactual)) {
                 sol.add(aux);
                 pactual = pactual + aux;
