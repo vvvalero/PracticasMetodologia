@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4273e11-87a6-49cb-bc32-18280de360b4" name="Changes" comment="Hecho método dameEspacioCamión" />
+    <list default="true" id="f4273e11-87a6-49cb-bc32-18280de360b4" name="Changes" comment="Cambios en el metodo voraz, lo he cambiado a un array de Floats en vez de un Arraylist, para mayor facilidad creo que así sería mejor. He añadido un main y algunos metodos a implementar.">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,6 +80,7 @@
       <updated>1711392806547</updated>
       <workItem from="1711392807663" duration="1272000" />
       <workItem from="1711394707366" duration="1692000" />
+      <workItem from="1711464830431" duration="617000" />
     </task>
     <task id="LOCAL-00001" summary="He creado el main y configurado el pom.xml y el Maven, si falta algo añadirlo">
       <option name="closed" value="true" />
@@ -122,14 +126,7 @@
       <option name="project" value="LOCAL" />
       <updated>1711395285123</updated>
     </task>
-    <task id="LOCAL-00007" summary="Hecho método dameEspacioCamión">
-      <created>1711465196685</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1711465196685</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,7 +150,6 @@
     <MESSAGE value="He creado la clase test y hecho uno de prueba" />
     <MESSAGE value="Clase voraz para hacer el algoritmo" />
     <MESSAGE value="Cambios en el metodo voraz, lo he cambiado a un array de Floats en vez de un Arraylist, para mayor facilidad creo que así sería mejor. He añadido un main y algunos metodos a implementar." />
-    <MESSAGE value="Hecho método dameEspacioCamión" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hecho método dameEspacioCamión" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambios en el metodo voraz, lo he cambiado a un array de Floats en vez de un Arraylist, para mayor facilidad creo que así sería mejor. He añadido un main y algunos metodos a implementar." />
   </component>
 </project>

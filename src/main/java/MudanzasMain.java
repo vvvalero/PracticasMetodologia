@@ -12,8 +12,18 @@ public class MudanzasMain {
         return i;
     }
     public static float [] dameObjetos(){
-        System.out.println("Introduzca el peso individual de cada objeto que se quiere introducir: ");
+        float [] objetos = new float[100];
+        float n=0;
+        int i=0;
+        System.out.println("Introduzca el peso individual de cada objeto que se quiere introducir, escribir 0 para salir: ");
+        do{
+            n = scanner.nextFloat();
+            if(n!=0)
+               objetos[i]=n;
+            i++;
+        }while(n!=0);
 
+        return objetos;
     }
     public static void main(String[] args) {
         int espacio = dameEspacioCamion();
