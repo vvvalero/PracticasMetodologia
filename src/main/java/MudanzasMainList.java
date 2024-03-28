@@ -1,34 +1,86 @@
 import java.util.*;
 
 public class MudanzasMainList {
-    final private static Scanner scanner = new Scanner(System.in);
-
-    public static float dameEspacioCamion(){
-        System.out.println("Introduzca peso máximo que se podrá cargar en el camión: ");
-        return scanner.nextFloat();
-    }
-    public static ArrayList<Float> dameObjetos(){
-        ArrayList<Float> objetos = new ArrayList<>();
-        float n;
-        System.out.println("Introduzca el peso individual de cada objeto que se quiere introducir, escribir 0 para salir: ");
-        do{
-            n = scanner.nextFloat();
-            if(n!=0)
-               objetos.add(n);
-        }while(n!=0);
-
-        return objetos;
-    }
-
     public static float factura(int tam,float precio){
         return tam*precio;
     }
-
     public static void main(String[] args) {
-        float espacio = dameEspacioCamion();
-        ArrayList<Float> objetos = dameObjetos();
+        //CASO ESTÁNDAR
+        float espacio = 100;
+        ArrayList<Float> objetos = new ArrayList<>();;
+        objetos.add(30f);
+        objetos.add(50f);
+        objetos.add(20f);
+        objetos.add(70f);
+        objetos.add(10f);
+
+        /*
+        //PRUEBA CON CAPACIDAD INSUFICIENTE
+        float espacio = 50;
+        ArrayList<Float> objetos = new ArrayList<>();;
+        objetos.add(60f);
+        objetos.add(700f);
+        objetos.add(80f);
+        */
+        /*
+        //PRUEBA CON PAQUETES DE IGUAL PESO
+        float espacio = 60;
+        ArrayList<Float> objetos = new ArrayList<>();;
+        objetos.add(30f);
+        objetos.add(30f);
+        objetos.add(30f);
+        */
+        /*
+        //PRUEBA CON PAQUETES DE PESO MÁXIMO
+        float espacio = 100;
+        ArrayList<Float> objetos = new ArrayList<>();;
+        objetos.add(100f);
+        objetos.add(100f);
+        */
+        /*
+        //PRUEBA CON NINGÚN PAQUETE
+        float espacio = 100;
+        ArrayList<Float> objetos = new ArrayList<>();;
+        */
+        /*
+        //PRUEBA CON CAPACIDAD NEGATIVA
+        float espacio = -100;
+        ArrayList<Float> objetos = new ArrayList<>();;
+        objetos.add(30f);
+        objetos.add(50f);
+        objetos.add(20f);
+        objetos.add(70f);
+        objetos.add(10f);
+        */
+        /*
+        //PRUEBA CON UNO DE LOS PESOS NEGATIVO
+        float espacio = 100;
+        ArrayList<Float> objetos = new ArrayList<>();;
+        objetos.add(-30f);
+        objetos.add(50f);
+        objetos.add(20f);
+        objetos.add(70f);
+        objetos.add(10f);
+        */
+        /*
+        //PRUEBA CON UN SOLO PESO NEGATIVO
+        float espacio = 100;
+        ArrayList<Float> objetos = new ArrayList<>();;
+        objetos.add(-30f);
+        */
+        /*
+        //PRUEBA CON UN SOLO PAQUETE QUE EXCEDE LA CAPACIDAD
+        float espacio = 50;
+        ArrayList<Float> objetos = new ArrayList<>();;
+        objetos.add(60f);
+        */
+
+        if(espacio<0){
+            System.out.println("Error. Capacidad negativa. Terminando ejecución del programa.");
+            return;
+        }
         ArrayList<Float> sol = voraz(objetos,espacio);
-        System.out.println("Pesos: " + sol);
+        System.out.println("Peso de los objetos a transportar: " + sol);
         System.out.println("Factura montante: " + factura(sol.size(),40));
     }
 
@@ -55,14 +107,19 @@ public class MudanzasMainList {
 
     public static ArrayList<Float> voraz(ArrayList<Float> pesos, float capacidad) {
         float pactual = 0,aux;
+        System.out.println("Peso de los objetos a cargar en el camión: " + pesos);
         eliminarNegativos(pesos);
         ArrayList<Float> sol=new ArrayList<>();
+        //Ordenación
         Collections.sort(pesos);
+        System.out.println("Ordenación paquetes por peso creciente: " + pesos);
         Iterator<Float> it = pesos.iterator();
         //El iterador empieza en el principio del array y lo vamos moviendo hacia el final con it.next();
 
         while(!esSolucion(capacidad,pactual) && it.hasNext()){ //it.hasNext devuelve True solo si hay mas elementos despues del actual
+            //selección
             aux=seleccionar(it);
+            //factibilidad
             if(factible(capacidad,aux,pactual)) {
                 sol.add(aux);
                 pactual = pactual + aux;
