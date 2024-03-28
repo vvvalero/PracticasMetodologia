@@ -214,6 +214,46 @@ public class MudanzasMainTests {
         assertArrayEquals(esperado, Res);
         assertEquals(esperado.length*40, MudanzasMainList.factura(Res.length, 40));
     }
+    @Test
+    public void testVorazListPesoNegativoUnico(){
+        float[] pesosA = {-30};
+        float pmax = 100;
+        float[] esperado = {};
+
+        ArrayList<Float> pesos = new ArrayList<>();
+        for (float p : pesosA) {
+            pesos.add(p);
+        }
+
+        ArrayList<Float> res = MudanzasMainList.voraz(pesos, pmax);
+        float[] Res = new float[res.size()];
+        for (int i = 0;i<res.size();i++) {
+            Res[i] = res.get(i);
+        }
+
+        assertArrayEquals(esperado, Res);
+        assertEquals(esperado.length*40, MudanzasMainList.factura(Res.length, 40));
+    }
+    @Test
+    public void testVorazListUnicoPesoExcede(){
+        float[] pesosA = {60};
+        float pmax = 50;
+        float[] esperado = {};
+
+        ArrayList<Float> pesos = new ArrayList<>();
+        for (float p : pesosA) {
+            pesos.add(p);
+        }
+
+        ArrayList<Float> res = MudanzasMainList.voraz(pesos, pmax);
+        float[] Res = new float[res.size()];
+        for (int i = 0;i<res.size();i++) {
+            Res[i] = res.get(i);
+        }
+
+        assertArrayEquals(esperado, Res);
+        assertEquals(esperado.length*40, MudanzasMainList.factura(Res.length, 40));
+    }
 
 
 }

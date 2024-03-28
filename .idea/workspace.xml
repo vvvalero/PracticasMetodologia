@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4273e11-87a6-49cb-bc32-18280de360b4" name="Changes" comment="Quedan comentados los scanners y algunos cambios pequeños en voraz. He añadido i&lt;tam como otra condición del while y algunos comentarios. Aún así sigue sin funcionar..">
+    <list default="true" id="f4273e11-87a6-49cb-bc32-18280de360b4" name="Changes" comment="He quitado los scanners en la clase de los ArrayList. He incluido algunas pruebas. Algunos prints para que se vea el arrayList de objetos a procesar y otro para que se vea tras ordenación. Incluido el if para abordar caso capacidad negativa. Nada de esto ha afectado al funcionamiento.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MudanzasMain.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MudanzasMainList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MudanzasMainList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MudanzasMainTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MudanzasMainTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,8 +108,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.MudanzasMainList" />
-        <item itemvalue="JUnit.MudanzasMainTests.testVorazListPesoNegativo" />
         <item itemvalue="JUnit.MudanzasMainTests" />
+        <item itemvalue="JUnit.MudanzasMainTests.testVorazListPesoNegativo" />
         <item itemvalue="JUnit.MudanzasMainTests.testVorazListCero" />
         <item itemvalue="JUnit.MudanzasMainTests.testVorazNegativo" />
       </list>
@@ -241,7 +243,21 @@
       <option name="project" value="LOCAL" />
       <updated>1711626805633</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="He quitado los scanners en la clase de los ArrayList. He incluido algunas pruebas. Algunos prints para que se vea el arrayList de objetos a procesar y otro para que se vea tras ordenación. Nada de esto ha afectado al funcionamiento.">
+      <created>1711628361383</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1711628361383</updated>
+    </task>
+    <task id="LOCAL-00018" summary="He quitado los scanners en la clase de los ArrayList. He incluido algunas pruebas. Algunos prints para que se vea el arrayList de objetos a procesar y otro para que se vea tras ordenación. Incluido el if para abordar caso capacidad negativa. Nada de esto ha afectado al funcionamiento.">
+      <created>1711628459498</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1711628459498</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,6 +287,8 @@
     <MESSAGE value="Agregados metodos removeNegatives() y factura()" />
     <MESSAGE value="Agregadas casi todas las pruebas" />
     <MESSAGE value="Quedan comentados los scanners y algunos cambios pequeños en voraz. He añadido i&lt;tam como otra condición del while y algunos comentarios. Aún así sigue sin funcionar.." />
-    <option name="LAST_COMMIT_MESSAGE" value="Quedan comentados los scanners y algunos cambios pequeños en voraz. He añadido i&lt;tam como otra condición del while y algunos comentarios. Aún así sigue sin funcionar.." />
+    <MESSAGE value="He quitado los scanners en la clase de los ArrayList. He incluido algunas pruebas. Algunos prints para que se vea el arrayList de objetos a procesar y otro para que se vea tras ordenación. Nada de esto ha afectado al funcionamiento." />
+    <MESSAGE value="He quitado los scanners en la clase de los ArrayList. He incluido algunas pruebas. Algunos prints para que se vea el arrayList de objetos a procesar y otro para que se vea tras ordenación. Incluido el if para abordar caso capacidad negativa. Nada de esto ha afectado al funcionamiento." />
+    <option name="LAST_COMMIT_MESSAGE" value="He quitado los scanners en la clase de los ArrayList. He incluido algunas pruebas. Algunos prints para que se vea el arrayList de objetos a procesar y otro para que se vea tras ordenación. Incluido el if para abordar caso capacidad negativa. Nada de esto ha afectado al funcionamiento." />
   </component>
 </project>
