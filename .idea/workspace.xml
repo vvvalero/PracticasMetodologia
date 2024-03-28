@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4273e11-87a6-49cb-bc32-18280de360b4" name="Changes" comment="Agregados metodos removeNegatives() y factura()">
+    <list default="true" id="f4273e11-87a6-49cb-bc32-18280de360b4" name="Changes" comment="Agregadas casi todas las pruebas">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/MudanzasMainTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MudanzasMainTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,21 +57,20 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.MudanzasMainTests.testVorazListPesoNegativo">
+    <configuration name="MudanzasMainTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProblemaVoraz" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MudanzasMainTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MudanzasMainTests.testVorazListCero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProblemaVoraz" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MudanzasMainTests" />
       <option name="METHOD_NAME" value="testVorazListCero" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MudanzasMainTests.testVorazListPesoMax" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ProblemaVoraz" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MudanzasMainTests" />
-      <option name="METHOD_NAME" value="testVorazListPesoMax" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -109,10 +109,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.MudanzasMainTests.testVorazListPesoNegativo" />
+        <item itemvalue="JUnit.MudanzasMainTests" />
         <item itemvalue="JUnit.MudanzasMainTests.testVorazListCero" />
         <item itemvalue="JUnit.MudanzasMainTests.testVorazNegativo" />
         <item itemvalue="JUnit.MudanzasMainTests.testVorazListVacio" />
-        <item itemvalue="JUnit.MudanzasMainTests.testVorazListPesoMax" />
       </list>
     </recent_temporary>
   </component>
@@ -128,7 +128,7 @@
       <workItem from="1711394707366" duration="1692000" />
       <workItem from="1711464830431" duration="617000" />
       <workItem from="1711469067131" duration="7173000" />
-      <workItem from="1711577187451" duration="8278000" />
+      <workItem from="1711577187451" duration="9324000" />
     </task>
     <task id="LOCAL-00001" summary="He creado el main y configurado el pom.xml y el Maven, si falta algo añadirlo">
       <option name="closed" value="true" />
@@ -230,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711585467672</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Agregadas casi todas las pruebas">
+      <created>1711585564436</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1711585564436</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,6 +265,7 @@
     <MESSAGE value="Implementado lo mismo pero con ArrayLists en otro fichero para comparar" />
     <MESSAGE value="Comentarios explicando Iterator()" />
     <MESSAGE value="Agregados metodos removeNegatives() y factura()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Agregados metodos removeNegatives() y factura()" />
+    <MESSAGE value="Agregadas casi todas las pruebas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agregadas casi todas las pruebas" />
   </component>
 </project>

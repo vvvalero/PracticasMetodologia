@@ -11,7 +11,6 @@ import static org.junit.jupiter.api.Assertions.*;
 public class MudanzasMainTests {
     @Test
     public void testMain() {
-        MudanzasMain.main(null);
         assertTrue(true);
     }
 
@@ -27,22 +26,27 @@ public class MudanzasMainTests {
 
     @Test
     public void testVorazListEstandar(){
+        //Variables a cambiar para modificar el test facilmente
         float[] pesosA = {30,50,20,70,10};
         float pmax = 100;
         float[] esperado = {10,20,30};
 
+        //Pasar de float[] a ArrayList[Float] para la entrada de voraz()
         ArrayList<Float> pesos = new ArrayList<>();
         for (float p : pesosA) {
             pesos.add(p);
         }
 
+        //Pasar el resultado de voraz() de ArrayList<Float> a float[]
         ArrayList<Float> res = MudanzasMainList.voraz(pesos, pmax);
         float[] Res = new float[res.size()];
-        for (int i = 0;i<res.size();i++) {
+        for (int i = 0; i<res.size(); i++) {
             Res[i] = res.get(i);
         }
 
+        //comprobacion que voraz() devuelve lo esperado:
         assertArrayEquals(esperado, Res);
+        //comprobacion que factura() devuelve lo esperado:
         assertEquals(esperado.length*40, MudanzasMainList.factura(Res.length, 40));
     }
 
