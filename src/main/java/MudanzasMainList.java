@@ -33,6 +33,7 @@ public class MudanzasMainList {
     }
 
     public static void eliminarNegativos(ArrayList<Float> pesos){
+        //Si el peso es menor o igual a 0 se elimina de pesos
         pesos.removeIf(peso -> peso <= 0);
     }
 
