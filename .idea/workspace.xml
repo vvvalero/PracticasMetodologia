@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4273e11-87a6-49cb-bc32-18280de360b4" name="Changes" comment="Comentarios explicando Iterator()">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MudanzasMainList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MudanzasMainList.java" afterDir="false" />
+    <list default="true" id="f4273e11-87a6-49cb-bc32-18280de360b4" name="Changes" comment="Agregados metodos removeNegatives() y factura()">
       <change beforePath="$PROJECT_DIR$/src/test/java/MudanzasMainTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MudanzasMainTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -132,7 +128,7 @@
       <workItem from="1711394707366" duration="1692000" />
       <workItem from="1711464830431" duration="617000" />
       <workItem from="1711469067131" duration="7173000" />
-      <workItem from="1711577187451" duration="7963000" />
+      <workItem from="1711577187451" duration="8278000" />
     </task>
     <task id="LOCAL-00001" summary="He creado el main y configurado el pom.xml y el Maven, si falta algo añadirlo">
       <option name="closed" value="true" />
@@ -213,7 +209,28 @@
       <option name="project" value="LOCAL" />
       <updated>1711475053907</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Agregados metodos removeNegatives() y factura()">
+      <created>1711585382358</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1711585382358</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Agregados metodos removeNegatives() y factura()">
+      <created>1711585425157</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1711585425157</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Agregados metodos removeNegatives() y factura()">
+      <created>1711585467672</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1711585467672</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,6 +257,7 @@
     <MESSAGE value="Cambios en voraz() y esSolucion()" />
     <MESSAGE value="Implementado lo mismo pero con ArrayLists en otro fichero para comparar" />
     <MESSAGE value="Comentarios explicando Iterator()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Comentarios explicando Iterator()" />
+    <MESSAGE value="Agregados metodos removeNegatives() y factura()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agregados metodos removeNegatives() y factura()" />
   </component>
 </project>
