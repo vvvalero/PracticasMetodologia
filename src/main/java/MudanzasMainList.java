@@ -32,7 +32,7 @@ public class MudanzasMainList {
         System.out.println("Factura montante: " + factura(sol.size(),40));
     }
 
-    public static void removeNegatives(ArrayList<Float> pesos){
+    public static void eliminarNegativos(ArrayList<Float> pesos){
         pesos.removeIf(peso -> peso <= 0);
     }
 
@@ -54,7 +54,7 @@ public class MudanzasMainList {
 
     public static ArrayList<Float> voraz(ArrayList<Float> pesos, float capacidad) {
         float pactual = 0,aux;
-        removeNegatives(pesos);
+        eliminarNegativos(pesos);
         ArrayList<Float> sol=new ArrayList<>();
         Collections.sort(pesos);
         Iterator<Float> it = pesos.iterator();
