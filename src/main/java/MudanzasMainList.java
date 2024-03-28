@@ -7,7 +7,7 @@ public class MudanzasMainList {
     public static void main(String[] args) {
         //CASO ESTÁNDAR
         float espacio = 100;
-        ArrayList<Float> objetos = new ArrayList<>();;
+        ArrayList<Float> objetos = new ArrayList<>();
         objetos.add(30f);
         objetos.add(50f);
         objetos.add(20f);
