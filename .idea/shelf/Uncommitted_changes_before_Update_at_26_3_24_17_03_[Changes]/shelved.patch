@@ -1,0 +1,54 @@
+Index: src/main/java/MudanzasMain.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.Collections;\nimport java.util.Arrays;\nimport java.util.Iterator;\nimport java.util.Scanner;\n\npublic class MudanzasMain {\n    private static Scanner scanner = new Scanner(System.in);\n\n    public static int dameEspacioCamion(){\n    //metodo para indicarle al programa la capacidad en el camion\n    }\n    public static float [] dameObjetos(){\n    //metodo para indicarle al programa el array de objetos a introducir en el programa\n    }\n    public static void main(String[] args) {\n        int espacio = dameEspacioCamion();\n        float [] objetos = dameObjetos();\n        voraz(objetos, espacio);\n    }\n    public static void voraz(float [] objetos, int capacidad){\n        float pactual=0;\n        Arrays.sort(objetos);\n        Iterator<Float> it = pesos.iterator();\n        ArrayList<float> sol=null;\n        float aux;\n        //Bucle voraz:\n        while(pactual<capacidad && it.hasNext()){\n            aux=it.next();\n            if(aux <= capacidad - pactual)\n                sol.add(aux);\n            pesos.remove(aux);\n        }\n        return sol;\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/MudanzasMain.java b/src/main/java/MudanzasMain.java
+--- a/src/main/java/MudanzasMain.java	
++++ b/src/main/java/MudanzasMain.java	
+@@ -1,5 +1,6 @@
+ import java.util.Collections;
+ import java.util.Arrays;
++import java.util.ArrayList;
+ import java.util.Iterator;
+ import java.util.Scanner;
+ 
+@@ -14,12 +15,13 @@
+     }
+     public static void main(String[] args) {
+         int espacio = dameEspacioCamion();
+-        float [] objetos = dameObjetos();
++        float [] objetos;
++        objetos
+         voraz(objetos, espacio);
+     }
+-    public static void voraz(float [] objetos, int capacidad){
+-        float pactual=0;
+-        Arrays.sort(objetos);
++    ArrayList<float> voraz(ArrayList<Float> pesos, float capacidad){
++        float pactual = 0,aux;
++        ArrayList<float> sol=new ArrayList<float>();
+         Iterator<Float> it = pesos.iterator();
+         ArrayList<float> sol=null;
+         float aux;
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"f4273e11-87a6-49cb-bc32-18280de360b4\" name=\"Changes\" comment=\"Clase voraz para hacer el algoritmo\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/MudanzasMain.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/MudanzasMain.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 7\n}</component>\n  <component name=\"ProjectId\" id=\"2eBzYS0EqNblHT6th2DdM5JZ3rn\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\n    &quot;git-widget-placeholder&quot;: &quot;main&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\n      <recent name=\"\" />\n    </key>\n  </component>\n  <component name=\"RunManager\">\n    <configuration name=\"MudanzasMainTests.testMain\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"ProblemaVoraz\" />\n      <option name=\"PACKAGE_NAME\" value=\"\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"MudanzasMainTests\" />\n      <option name=\"METHOD_NAME\" value=\"testMain\" />\n      <option name=\"TEST_OBJECT\" value=\"method\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"JUnit.MudanzasMainTests.testMain\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"f4273e11-87a6-49cb-bc32-18280de360b4\" name=\"Changes\" comment=\"\" />\n      <created>1711392806547</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1711392806547</updated>\n      <workItem from=\"1711392807663\" duration=\"1272000\" />\n      <workItem from=\"1711394707366\" duration=\"1692000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"He creado el main y configurado el pom.xml y el Maven, si falta algo añadirlo\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1711393498945</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1711393498945</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"He creado la clase test y hecho uno de prueba\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1711393759345</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1711393759345</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"He creado la clase test y hecho uno de prueba\">\n      <created>1711394769254</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1711394769254</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"He creado la clase test y hecho uno de prueba\">\n      <created>1711394858551</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1711394858551</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"He creado la clase test y hecho uno de prueba\">\n      <created>1711394997383</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1711394997383</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"Clase voraz para hacer el algoritmo\">\n      <created>1711395285123</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1711395285123</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"7\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"He creado el main y configurado el pom.xml y el Maven, si falta algo añadirlo\" />\n    <MESSAGE value=\"clase voraz\" />\n    <MESSAGE value=\"metodo voraz\" />\n    <MESSAGE value=\"He creado la clase test y hecho uno de prueba\" />\n    <MESSAGE value=\"Clase voraz para hacer el algoritmo\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Clase voraz para hacer el algoritmo\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,7 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="f4273e11-87a6-49cb-bc32-18280de360b4" name="Changes" comment="Clase voraz para hacer el algoritmo">
++    <list default="true" id="f4273e11-87a6-49cb-bc32-18280de360b4" name="Changes" comment="Cambios de sintaxis">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/MudanzasMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MudanzasMain.java" afterDir="false" />
+     </list>
