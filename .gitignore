@@ -1,5 +1,4 @@
-/.idea/.name
-/.idea/compiler.xml
+/.idea
 /target/maven-status/maven-compiler-plugin/compile/default-cli/createdFiles.lst
 /target/maven-status/maven-compiler-plugin/compile/default-cli/inputFiles.lst
 /.idea/jarRepositories.xml
@@ -7,3 +6,4 @@
 /target/classes/MudanzasMainList.class
 /target/test-classes/MudanzasMainTests.class
 /target/classes/MudanzasMain.class
+
