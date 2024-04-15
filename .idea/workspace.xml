@@ -4,291 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4273e11-87a6-49cb-bc32-18280de360b4" name="Changes" comment="He quitado los scanners en la clase de los ArrayList. He incluido algunas pruebas. Algunos prints para que se vea el arrayList de objetos a procesar y otro para que se vea tras ordenación. Incluido el if para abordar caso capacidad negativa. Nada de esto ha afectado al funcionamiento.">
+    <list default="true" id="7a66cfac-7b7b-4f4d-b6e8-428d144ce1f3" name="Changes" comment="Hice el método seleccionar">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_3_24_13_40__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_3_24_17_03__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MudanzasMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MudanzasMainList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MudanzasMainList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MudanzasMainTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MudanzasMainTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
-}</component>
-  <component name="ProjectId" id="2eBzYS0EqNblHT6th2DdM5JZ3rn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\valen\OneDrive\Escritorio\Java\ProblemaVoraz1" />
+      <recent name="C:\Users\valen\OneDrive\Escritorio\Java\ProblemaVoraz1\rc\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MudanzasMainList">
-    <configuration name="MudanzasMainList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MudanzasMainList" />
-      <module name="ProblemaVoraz" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MudanzasMainTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ProblemaVoraz" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MudanzasMainTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MudanzasMainTests.testVorazListCero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ProblemaVoraz" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MudanzasMainTests" />
-      <option name="METHOD_NAME" value="testVorazListCero" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MudanzasMainTests.testVorazListPesoNegativo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ProblemaVoraz" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MudanzasMainTests" />
-      <option name="METHOD_NAME" value="testVorazListPesoNegativo" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MudanzasMainTests.testVorazNegativo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ProblemaVoraz" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MudanzasMainTests" />
-      <option name="METHOD_NAME" value="testVorazNegativo" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.MudanzasMainList" />
-        <item itemvalue="JUnit.MudanzasMainTests" />
-        <item itemvalue="JUnit.MudanzasMainTests.testVorazListPesoNegativo" />
-        <item itemvalue="JUnit.MudanzasMainTests.testVorazListCero" />
-        <item itemvalue="JUnit.MudanzasMainTests.testVorazNegativo" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="f4273e11-87a6-49cb-bc32-18280de360b4" name="Changes" comment="" />
-      <created>1711392806547</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1711392806547</updated>
-      <workItem from="1711392807663" duration="1272000" />
-      <workItem from="1711394707366" duration="1692000" />
-      <workItem from="1711464830431" duration="617000" />
-      <workItem from="1711469067131" duration="7173000" />
-      <workItem from="1711577187451" duration="9324000" />
-    </task>
-    <task id="LOCAL-00001" summary="He creado el main y configurado el pom.xml y el Maven, si falta algo añadirlo">
-      <option name="closed" value="true" />
-      <created>1711393498945</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1711393498945</updated>
-    </task>
-    <task id="LOCAL-00002" summary="He creado la clase test y hecho uno de prueba">
-      <option name="closed" value="true" />
-      <created>1711393759345</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1711393759345</updated>
-    </task>
-    <task id="LOCAL-00003" summary="He creado la clase test y hecho uno de prueba">
-      <created>1711394769254</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1711394769254</updated>
-    </task>
-    <task id="LOCAL-00004" summary="He creado la clase test y hecho uno de prueba">
-      <created>1711394858551</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1711394858551</updated>
-    </task>
-    <task id="LOCAL-00005" summary="He creado la clase test y hecho uno de prueba">
-      <created>1711394997383</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1711394997383</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Clase voraz para hacer el algoritmo">
-      <created>1711395285123</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1711395285123</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Cambios en voraz() y esSolucion()">
-      <created>1711471657651</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1711471657651</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Cambios en voraz() y esSolucion()">
-      <created>1711472081651</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1711472081651</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Implementado lo mismo pero con ArrayLists en otro fichero para comparar">
-      <created>1711474701567</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1711474701567</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Comentarios explicando Iterator()">
-      <created>1711474996220</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1711474996220</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Comentarios explicando Iterator()">
-      <created>1711475053907</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1711475053907</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Agregados metodos removeNegatives() y factura()">
-      <created>1711585382358</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1711585382358</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Agregados metodos removeNegatives() y factura()">
-      <created>1711585425157</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1711585425157</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Agregados metodos removeNegatives() y factura()">
-      <created>1711585467672</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1711585467672</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Agregadas casi todas las pruebas">
-      <created>1711585564436</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1711585564436</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Quedan comentados los scanners y algunos cambios pequeños en voraz. He añadido i&lt;tam como otra condición del while y algunos comentarios. Aún así sigue sin funcionar..">
-      <created>1711626805633</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1711626805633</updated>
-    </task>
-    <task id="LOCAL-00017" summary="He quitado los scanners en la clase de los ArrayList. He incluido algunas pruebas. Algunos prints para que se vea el arrayList de objetos a procesar y otro para que se vea tras ordenación. Nada de esto ha afectado al funcionamiento.">
-      <created>1711628361383</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1711628361383</updated>
-    </task>
-    <task id="LOCAL-00018" summary="He quitado los scanners en la clase de los ArrayList. He incluido algunas pruebas. Algunos prints para que se vea el arrayList de objetos a procesar y otro para que se vea tras ordenación. Incluido el if para abordar caso capacidad negativa. Nada de esto ha afectado al funcionamiento.">
-      <created>1711628459498</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1711628459498</updated>
-    </task>
-    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="He creado el main y configurado el pom.xml y el Maven, si falta algo añadirlo" />
-    <MESSAGE value="clase voraz" />
-    <MESSAGE value="metodo voraz" />
-    <MESSAGE value="He creado la clase test y hecho uno de prueba" />
-    <MESSAGE value="Clase voraz para hacer el algoritmo" />
-    <MESSAGE value="Cambios en el metodo voraz, lo he cambiado a un array de Floats en vez de un Arraylist, para mayor facilidad creo que así sería mejor. He añadido un main y algunos metodos a implementar." />
-    <MESSAGE value="Cambios en voraz() y esSolucion()" />
-    <MESSAGE value="Implementado lo mismo pero con ArrayLists en otro fichero para comparar" />
-    <MESSAGE value="Comentarios explicando Iterator()" />
-    <MESSAGE value="Agregados metodos removeNegatives() y factura()" />
-    <MESSAGE value="Agregadas casi todas las pruebas" />
-    <MESSAGE value="Quedan comentados los scanners y algunos cambios pequeños en voraz. He añadido i&lt;tam como otra condición del while y algunos comentarios. Aún así sigue sin funcionar.." />
-    <MESSAGE value="He quitado los scanners en la clase de los ArrayList. He incluido algunas pruebas. Algunos prints para que se vea el arrayList de objetos a procesar y otro para que se vea tras ordenación. Nada de esto ha afectado al funcionamiento." />
-    <MESSAGE value="He quitado los scanners en la clase de los ArrayList. He incluido algunas pruebas. Algunos prints para que se vea el arrayList de objetos a procesar y otro para que se vea tras ordenación. Incluido el if para abordar caso capacidad negativa. Nada de esto ha afectado al funcionamiento." />
-    <option name="LAST_COMMIT_MESSAGE" value="He quitado los scanners en la clase de los ArrayList. He incluido algunas pruebas. Algunos prints para que se vea el arrayList de objetos a procesar y otro para que se vea tras ordenación. Incluido el if para abordar caso capacidad negativa. Nada de esto ha afectado al funcionamiento." />
+    <MESSAGE value="Hice el método seleccionar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hice el método seleccionar" />
   </component>
 </project>
