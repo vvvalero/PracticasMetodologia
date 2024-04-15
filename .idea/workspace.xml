@@ -4,18 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a66cfac-7b7b-4f4d-b6e8-428d144ce1f3" name="Changes" comment="Hice el método seleccionar">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_3_24_13_40__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_3_24_17_03__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="7a66cfac-7b7b-4f4d-b6e8-428d144ce1f3" name="Changes" comment="He añadido los primeros imports">
+      <change afterPath="$PROJECT_DIR$/src/main/java/MudanzasDinamico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MudanzasDinámico.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent"><![CDATA[{
@@ -37,10 +40,46 @@
     </key>
   </component>
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="He modificado el pom para usar Log4J">
+      <option name="closed" value="true" />
+      <created>1713199326279</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713199326279</updated>
+    </task>
+    <task id="LOCAL-00002" summary="He modificado el pom para usar Log4J">
+      <option name="closed" value="true" />
+      <created>1713199353468</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713199353468</updated>
+    </task>
+    <task id="LOCAL-00003" summary="He añadido la clase principal y tests (vacíos de momento)">
+      <option name="closed" value="true" />
+      <created>1713199477184</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713199477184</updated>
+    </task>
+    <task id="LOCAL-00004" summary="He añadido los primeros imports">
+      <option name="closed" value="true" />
+      <created>1713199586027</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713199586027</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Hice el método seleccionar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hice el método seleccionar" />
+    <MESSAGE value="He modificado el pom para usar Log4J" />
+    <MESSAGE value="He añadido la clase principal y tests (vacíos de momento)" />
+    <MESSAGE value="He añadido los primeros imports" />
+    <option name="LAST_COMMIT_MESSAGE" value="He añadido los primeros imports" />
   </component>
 </project>
