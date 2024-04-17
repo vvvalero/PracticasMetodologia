@@ -3,6 +3,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 public class MudanzasDinamico {
     private static final Logger logger = LogManager.getLogger(MudanzasDinamico.class);
+    public static int factura(int tam,int precio){
+        return tam*precio;
+    };
     public static void main(String[] args) {
         logger.trace("Mensaje TRACE: Muy detallado, ideal para diagnóstico fino");
         logger.debug("Mensaje DEBUG: Detalles de depuración, útil durante el desarrollo");
@@ -11,4 +14,5 @@ public class MudanzasDinamico {
         logger.error("Mensaje ERROR: Error en la ejecución que debe ser investigado");
         logger.fatal("Mensaje FATAL: Error crítico que probablemente aborte la aplicación");
     }
+
 }
