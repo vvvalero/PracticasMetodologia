@@ -1,0 +1,49 @@
+SON LOS MISMAS METODOS PERO CAMBIANDO LAS FILAS POR LAS COLUMNAS
+EN TEORIA DEBERIA SER MAS EFICIENTE AL USAR LA LOCALIDAD DE LA CACHÉ EN EL METODO sacarPesos(), PERO EN REALIDAD VA EXACTAMENTE IGUAL
+CON UNA MEDIA DE EJECUCION DE 320 MS MAS O MENOS IGUAL QUE SIN CAMBIAR LA FILAS POR LAS COLUMNAS
+
+    public static int[][] matrizDecisiones(ArrayList<Integer> pesos,int pmax,int beneficio){
+        //[pesos.size()][pmax + 1]
+        pesos.add(0,0);
+        int filas = pmax+1;
+        int col = pesos.size();
+        int[][] matriz = new int[filas][col];
+        int aux;
+
+        for (int j=0;j<col;j++){
+            for(int i = 0;i<filas;i++){
+                if(i!=0 && j!=0) {
+                    aux=pesos.get(j);
+                    if (i<aux)
+                        matriz[i][j]=matriz[i][j-1];
+                    else
+                        matriz[i][j] = Integer.max(matriz[i][j - 1], beneficio + matriz[i - aux][(j - 1)]);
+                }
+            }
+        }
+        return matriz;
+    }
+    //Sacar los pesos usados en la matriz de Decisiones y devolverlos en un arraylist
+    public static ArrayList<Integer> sacarPesos(ArrayList<Integer> pesos, int pmax,int[][] matriz){
+        ArrayList<Integer> res = new ArrayList<>();
+        int filas = pmax+1;
+        int col = pesos.size();
+        int aux = matriz[filas-1][col-1];
+
+        //MUY ineficiente
+        for(int i=filas-1;i>=0;i--){
+            for (int j=col-2;j>=0;j--){
+                if(matriz[i][j] < aux){
+                    res.add(pesos.get(j+1));
+                    j=j+1;
+                    if(pesos.get(j)>i)
+                        i=0;
+                    else
+                        i=i - pesos.get(j);
+                }
+                aux=matriz[i][j];
+            }
+        }
+        return res;
+    }
+}

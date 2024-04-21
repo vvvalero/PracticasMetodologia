@@ -50,7 +50,7 @@ public class MudanzasDinamico {
         int col = pmax+1;
         int aux = matriz[filas-1][col-1];
 
-        //MUY ineficiente
+        //MUY ineficiente (en vd va igual)
         for(int j=col-1;j>=0;j--){
             for (int i=filas-2;i>=0;i--){
                 if(matriz[i][j] < aux){
