@@ -24,20 +24,20 @@ public class MudanzasDinamico {
     }
     public static int[][] matrizDecisiones(ArrayList<Integer> pesos,int pmax,int beneficio){
         //[pesos.size()][pmax + 1]
+        pesos.add(0,0);
         int filas = pesos.size();
-        int col = pmax;
+        int col = pmax+1;
         int[][] matriz = new int[filas][col];
         int aux;
 
-        for (int i = 0;i<filas;i++){
-            for(int j=0;j<col;j++){
-                if(i==0 || j==0)
-                    matriz[i][j]=0;
-                else {
+        for (int j=0;j<col;j++){
+            for(int i = 0;i<filas;i++){
+                if(i!=0 && j!=0) {
                     aux=pesos.get(i);
-                    if (aux>j)
-                        aux=j;
-                    matriz[i][j] = Integer.max(matriz[i - 1][j], beneficio + matriz[i - 1][(j - aux)]);
+                    if (j<aux)
+                        matriz[i][j]=matriz[i-1][j];
+                    else
+                        matriz[i][j] = Integer.max(matriz[i - 1][j], beneficio + matriz[i - 1][(j - aux)]);
                 }
             }
         }
@@ -47,7 +47,7 @@ public class MudanzasDinamico {
     public static ArrayList<Integer> sacarPesos(ArrayList<Integer> pesos, int pmax,int[][] matriz){
         ArrayList<Integer> res = new ArrayList<>();
         int filas = pesos.size();
-        int col = pmax;
+        int col = pmax+1;
         int aux = matriz[filas-1][col-1];
 
         //MUY ineficiente
