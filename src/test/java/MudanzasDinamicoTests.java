@@ -21,19 +21,19 @@ public class MudanzasDinamicoTests {
     @Test
     public void testListaEstandar(){
         //Variables a cambiar para modificar el test facilmente
-        float[] pesosA = {3,4,3,3,3};
-        float pmax = 9;
-        float[] esperado = {3,3,3};
+        int[] pesosA = {3,4,3,3,3};
+        int pmax = 9;
+        int[] esperado = {3,3,3};
 
         //Pasar de float[] a ArrayList[Float] para la entrada de voraz()
-        ArrayList<Float> pesos = new ArrayList<>();
-        for (float p : pesosA) {
+        ArrayList<Integer> pesos = new ArrayList<>();
+        for (int p : pesosA) {
             pesos.add(p);
         }
 
         //Pasar el resultado de voraz() de ArrayList<Float> a float[]
-        ArrayList<Float> res = MudanzasMainList.voraz(pesos, pmax);
-        float[] Res = new float[res.size()];
+        ArrayList<Integer> res = MudanzasDinamico.algoritmoDinamico(pesos,pmax,6);
+        int[] Res = new int[res.size()];
         for (int i = 0; i<res.size(); i++) {
             Res[i] = res.get(i);
         }

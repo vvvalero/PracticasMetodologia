@@ -19,20 +19,26 @@ public class MudanzasDinamico {
 
 
     //Debera llamar a matrizDecisiones y a sacarPesos
-    public static ArrayList<Integer> algoritmoDinamico(ArrayList<Integer> pesos, int pmax){
-        return new ArrayList<>();
+    public static ArrayList<Integer> algoritmoDinamico(ArrayList<Integer> pesos, int pmax,int beneficio){
+        return sacarPesos(pesos,pmax,matrizDecisiones(pesos,pmax,beneficio));
     }
     public static int[][] matrizDecisiones(ArrayList<Integer> pesos,int pmax,int beneficio){
         //[pesos.size()][pmax + 1]
         int filas = pesos.size();
         int col = pmax;
         int[][] matriz = new int[filas][col];
+        int aux;
+
         for (int i = 0;i<filas;i++){
             for(int j=0;j<col;j++){
                 if(i==0 || j==0)
                     matriz[i][j]=0;
-                else
-                    matriz[i][j]=Integer.max(matriz[i-1][j],beneficio + matriz[i-1][(j-pesos.get(i))]);
+                else {
+                    aux=pesos.get(i);
+                    if (aux>j)
+                        aux=j;
+                    matriz[i][j] = Integer.max(matriz[i - 1][j], beneficio + matriz[i - 1][(j - aux)]);
+                }
             }
         }
         return matriz;
@@ -45,12 +51,15 @@ public class MudanzasDinamico {
         int aux = matriz[filas-1][col-1];
 
         //MUY ineficiente
-        for(int j=col-2;j>=0;j--){
-            for (int i=filas-2;i>=0;i++){
+        for(int j=col-1;j>=0;j--){
+            for (int i=filas-2;i>=0;i--){
                 if(matriz[i][j] < aux){
-                    res.add(matriz[i+1][j]);
+                    res.add(pesos.get(i+1));
                     i=i+1;
-                    j=j - pesos.get(j);
+                    if(pesos.get(i)>j)
+                        j=0;
+                    else
+                        j=j - pesos.get(i);
                 }
                 aux=matriz[i][j];
             }
