@@ -49,5 +49,72 @@ public class MudanzasDinamicoTests {
         //comprobacion que factura() devuelve lo esperado:
         assertEquals(esperadoFactura, MudanzasDinamico.factura(benefKilo,ArrayMatriz.toArrayList(Res)));
     }
+    @Test
+    public void testListaEstandarDos(){
+        //Variables a cambiar para modificar el test facilmente
+        int[] pesosA = {30,50,20,70,10};
+        int pmax = 100;
+        int[] esperado = {20,50,30};
+        int esperadoFactura = 600;
+        int benefKilo = 6;
+
+        int[]Res = operaciones(pesosA,pmax);
+
+        //comprobacion que el algoritmo devuelve lo esperado:
+        assertArrayEquals(esperado, Res);
+        //comprobacion que factura() devuelve lo esperado:
+        assertEquals(esperadoFactura, MudanzasDinamico.factura(benefKilo,ArrayMatriz.toArrayList(Res)));
+    }
+    @Test
+    //NO PASA EL TEST, DEVUELVE {50,50} POR ALGUN MOTIVO:
+    public void testListaEstandarTres(){
+        //Variables a cambiar para modificar el test facilmente
+        int[] pesosA = {30,50,80};
+        int pmax = 100;
+        int[] esperado = {50,30};
+        int esperadoFactura = 360;
+        int benefKilo = 6;
+
+        int[]Res = operaciones(pesosA,pmax);
+
+        //comprobacion que el algoritmo devuelve lo esperado:
+        assertArrayEquals(esperado, Res);
+        //comprobacion que factura() devuelve lo esperado:
+        assertEquals(esperadoFactura, MudanzasDinamico.factura(benefKilo,ArrayMatriz.toArrayList(Res)));
+    }
+
+    @Test
+    public void testListaPesoNulo(){
+        //Variables a cambiar para modificar el test facilmente
+        int[] pesosA = {};
+        int pmax = 100;
+        int[] esperado = {};
+        int esperadoFactura = 0;
+        int benefKilo = 6;
+
+        int[]Res = operaciones(pesosA,pmax);
+
+        //comprobacion que el algoritmo devuelve lo esperado:
+        assertArrayEquals(esperado, Res);
+        //comprobacion que factura() devuelve lo esperado:
+        assertEquals(esperadoFactura, MudanzasDinamico.factura(benefKilo,ArrayMatriz.toArrayList(Res)));
+    }
+    @Test
+    public void testListaPesoMayor(){
+        //Variables a cambiar para modificar el test facilmente
+        int[] pesosA = {150,20,70};
+        int pmax = 100;
+        int[] esperado = {70,20};
+        int esperadoFactura = 540;
+        int benefKilo = 6;
+
+        int[]Res = operaciones(pesosA,pmax);
+
+        //comprobacion que el algoritmo devuelve lo esperado:
+        assertArrayEquals(esperado, Res);
+        //comprobacion que factura() devuelve lo esperado:
+        assertEquals(esperadoFactura, MudanzasDinamico.factura(benefKilo,ArrayMatriz.toArrayList(Res)));
+    }
+
 }
 //Domain driven design

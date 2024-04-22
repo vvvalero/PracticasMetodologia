@@ -29,7 +29,6 @@ public class MudanzasDinamico {
         return sacarPesos(pesos,pmax,matrizDecisiones(pesos,pmax,beneficio));
     }
     public static int[][] matrizDecisiones(ArrayList<Integer> pesos,int pmax,int beneficio){
-        //[pesos.size()][pmax + 1]
         pesos.add(0,0);
         int filas = pesos.size();
         int col = pmax+1;
@@ -56,7 +55,6 @@ public class MudanzasDinamico {
         int col = pmax+1;
         int aux = matriz[filas-1][col-1];
 
-        //MUY ineficiente (en vd va igual)
         for(int j=col-1;j>=0;j--){
             for (int i=filas-2;i>=0;i--){
                 if(matriz[i][j] < aux){
