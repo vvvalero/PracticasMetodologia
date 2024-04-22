@@ -4,19 +4,34 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import operaciones.ArrayMatriz;
+
 public class MudanzasDinamicoTests {
     @Test
     public void testMain() {
         assertTrue(true);
     }
 
-    @Test
-    public void testFactura() {
-        assertEquals(120, MudanzasDinamico.factura(3, 40));
+
+    public int[] operaciones(int[] pesosA,int pmax){
+        //Pasar de float[] a ArrayList[Float] para la entrada de voraz()
+        ArrayList<Integer> pesos = ArrayMatriz.toArrayList(pesosA);
+
+        //Pasar el resultado del algoritmo de ArrayList<Float> a float[]
+        ArrayList<Integer> res = MudanzasDinamico.algoritmoDinamico(pesos,pmax,6);
+        int[] Res = ArrayMatriz.toMatriz(res);
+
+        return Res;
     }
 
     @Test
-    public void testFacturaNulo() {assertEquals(0, MudanzasDinamico.factura(0, 40));}
+    public void testFactura() {
+        int[] aux = {20,15,5};
+        assertEquals(120, MudanzasDinamico.factura(3, ArrayMatriz.toArrayList(aux)));
+    }
+
+    @Test
+    public void testFacturaNulo() {assertEquals(0, MudanzasDinamico.factura(0, new ArrayList<>()));}
 
     @Test
     public void testListaEstandar(){
@@ -24,24 +39,15 @@ public class MudanzasDinamicoTests {
         int[] pesosA = {3,4,3,3,3};
         int pmax = 9;
         int[] esperado = {3,3,3};
+        int esperadoFactura = 54;
+        int benefKilo = 6;
 
-        //Pasar de float[] a ArrayList[Float] para la entrada de voraz()
-        ArrayList<Integer> pesos = new ArrayList<>();
-        for (int p : pesosA) {
-            pesos.add(p);
-        }
+        int[]Res = operaciones(pesosA,pmax);
 
-        //Pasar el resultado de voraz() de ArrayList<Float> a float[]
-        ArrayList<Integer> res = MudanzasDinamico.algoritmoDinamico(pesos,pmax,6);
-        int[] Res = new int[res.size()];
-        for (int i = 0; i<res.size(); i++) {
-            Res[i] = res.get(i);
-        }
-
-        //comprobacion que voraz() devuelve lo esperado:
+        //comprobacion que el algoritmo devuelve lo esperado:
         assertArrayEquals(esperado, Res);
         //comprobacion que factura() devuelve lo esperado:
-        assertEquals(esperado.length*40, MudanzasMainList.factura(Res.length, 40));
+        assertEquals(esperadoFactura, MudanzasDinamico.factura(benefKilo,ArrayMatriz.toArrayList(Res)));
     }
 }
 //Domain driven design

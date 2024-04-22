@@ -4,8 +4,13 @@ import org.apache.logging.log4j.Logger;
 public class MudanzasDinamico {
     private static ArrayList<Integer> pesos = new ArrayList<Integer>();
     private static final Logger logger = LogManager.getLogger(MudanzasDinamico.class);
-    public static int factura(int tam,int precio){
-        return tam*precio;
+    public static int factura(int precio,ArrayList<Integer> sol){
+        int sum=0;
+        for (int i:
+             sol) {
+            sum=sum+i;
+        }
+        return sum*precio;
     };
     public static void main(String[] args) {
         int pmax = 15,beneficio = 6; //casos que da el problema
@@ -13,9 +18,9 @@ public class MudanzasDinamico {
         for (int p : pesosA) { //convertir el array a un arraylist
             pesos.add(p);
         }
-        ArrayList<Integer> sol= new ArrayList<Integer>(algoritmoDinamico(pesos,pmax,beneficio));
+        ArrayList<Integer> sol= new ArrayList<>(algoritmoDinamico(pesos,pmax,beneficio));
         logger.info("Solucion: "+sol); //no se si se puede hacer un logger.info(sol) directamente
-        logger.info("El beneficio es: "+ factura(sol.size(),beneficio));
+        logger.info("El beneficio es: "+ factura(beneficio,sol));
     }
 
 
@@ -38,7 +43,7 @@ public class MudanzasDinamico {
                     if (j<aux)
                         matriz[i][j]=matriz[i-1][j];
                     else
-                        matriz[i][j] = Integer.max(matriz[i - 1][j], beneficio + matriz[i - 1][(j - aux)]);
+                        matriz[i][j] = Integer.max(matriz[i - 1][j], beneficio*aux + matriz[i - 1][(j - aux)]);
                 }
             }
         }
