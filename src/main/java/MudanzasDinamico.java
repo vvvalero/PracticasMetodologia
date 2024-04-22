@@ -15,6 +15,7 @@ public class MudanzasDinamico {
         }
         ArrayList<Integer> sol= new ArrayList<Integer>(algoritmoDinamico(pesos,pmax,beneficio));
         logger.info("Solucion: "+sol); //no se si se puede hacer un logger.info(sol) directamente
+        logger.info("El beneficio es: "+ factura(sol.size(),beneficio));
     }
 
 
