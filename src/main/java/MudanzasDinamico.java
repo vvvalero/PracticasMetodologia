@@ -13,14 +13,16 @@ public class MudanzasDinamico {
         return sum*precio;
     };
     public static void main(String[] args) {
-        int pmax = 15,beneficio = 6; //casos que da el problema
-        int[] pesosA = {3,4,3,3,3}; //se puede modificar como queramos
+        int pmax = 10,beneficio = 6; //casos que da el problema
+        int[] pesosA = {3,5,8}; //se puede modificar como queramos
         for (int p : pesosA) { //convertir el array a un arraylist
             pesos.add(p);
         }
         ArrayList<Integer> sol= new ArrayList<>(algoritmoDinamico(pesos,pmax,beneficio));
         logger.info("Solucion: "+sol); //no se si se puede hacer un logger.info(sol) directamente
         logger.info("El beneficio es: "+ factura(beneficio,sol));
+        System.out.println("Solucion: "+sol);
+        System.out.println("El beneficio es: "+ factura(beneficio,sol));
     }
 
 
@@ -28,7 +30,7 @@ public class MudanzasDinamico {
     public static ArrayList<Integer> algoritmoDinamico(ArrayList<Integer> pesos, int pmax,int beneficio){
         return sacarPesos(pesos,pmax,matrizDecisiones(pesos,pmax,beneficio));
     }
-    public static int[][] matrizDecisiones(ArrayList<Integer> pesos,int pmax,int beneficio){
+    public static int[][] matrizDecisiones(ArrayList<Integer> pesos,int pmax,int beneficio){ //hice debug y la funcio
         pesos.add(0,0);
         int filas = pesos.size();
         int col = pmax+1;
