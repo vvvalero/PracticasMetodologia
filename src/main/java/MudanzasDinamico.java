@@ -1,6 +1,9 @@
-import java.util.*;
+import MetodosAdicionales.MetodosAdicionales;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.util.ArrayList;
+
 public class MudanzasDinamico {
     private static ArrayList<Integer> pesos = new ArrayList<Integer>();
     private static final Logger logger = LogManager.getLogger(MudanzasDinamico.class);
@@ -31,6 +34,7 @@ public class MudanzasDinamico {
         return sacarPesos(pesos,pmax,matrizDecisiones(pesos,pmax,beneficio));
     }
     public static int[][] matrizDecisiones(ArrayList<Integer> pesos,int pmax,int beneficio){ //hice debug y funciona
+        MetodosAdicionales.eliminarNegativos(pesos);
         pesos.add(0,0);
         int filas = pesos.size();
         int col = pmax+1;
@@ -52,6 +56,9 @@ public class MudanzasDinamico {
     }
     //Sacar los pesos usados en la matriz de Decisiones y devolverlos en un arraylist
     public static ArrayList<Integer> sacarPesos(ArrayList<Integer> pesos, int pmax,int[][] matriz){
+        ArrayList<Integer> idPesosCogidos = new ArrayList<>();
+        //Para solucionar el test del 50,50. Almacenamos los id de los pesos ya cogidos.
+        //Los id y no los pesos en si pues el peso puede repetirse (dos objetos que pesen 3)
         ArrayList<Integer> res = new ArrayList<>();
         int filas = pesos.size();
         int col = pmax+1;
@@ -59,8 +66,9 @@ public class MudanzasDinamico {
 
         for(int j=col-1;j>=0;j--){
             for (int i=filas-2;i>=0;i--){
-                if(matriz[i][j] < aux){
+                if(matriz[i][j] < aux && !idPesosCogidos.contains(i+1)){
                     res.add(pesos.get(i+1));
+                    idPesosCogidos.add(i+1);
                     i=i+1;
                     if(pesos.get(i)>j)
                         j=0;
