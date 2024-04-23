@@ -30,7 +30,7 @@ public class MudanzasDinamico {
     public static ArrayList<Integer> algoritmoDinamico(ArrayList<Integer> pesos, int pmax,int beneficio){
         return sacarPesos(pesos,pmax,matrizDecisiones(pesos,pmax,beneficio));
     }
-    public static int[][] matrizDecisiones(ArrayList<Integer> pesos,int pmax,int beneficio){ //hice debug y la funcio
+    public static int[][] matrizDecisiones(ArrayList<Integer> pesos,int pmax,int beneficio){ //hice debug y funciona
         pesos.add(0,0);
         int filas = pesos.size();
         int col = pmax+1;
