@@ -115,6 +115,82 @@ public class MudanzasDinamicoTests {
         //comprobacion que factura() devuelve lo esperado:
         assertEquals(esperadoFactura, MudanzasDinamico.factura(benefKilo,ArrayMatriz.toArrayList(Res)));
     }
+    @Test
+    public void testListaSinSolucion() {
+        int[] pesosA = {20, 25, 30};
+        int pmax = 15;
+        int[] esperado = {};
+        int esperadoFactura = 0;
+        int benefKilo = 6;
 
+        int[] Res = operaciones(pesosA, pmax);
+
+        // Comprobación que el algoritmo devuelve lo esperado:
+        assertArrayEquals(esperado, Res);
+        // Comprobación que factura() devuelve lo esperado:
+        assertEquals(esperadoFactura, MudanzasDinamico.factura(benefKilo, ArrayMatriz.toArrayList(Res)));
+    }
+    //NO PASA EL TEST
+    @Test
+    public void testListaConUnSoloElemento() {
+        int[] pesosA = {10};
+        int pmax = 20;
+        int[] esperado = {10};
+        int esperadoFactura = 60;
+        int benefKilo = 6;
+
+        int[] Res = operaciones(pesosA, pmax);
+
+        // Comprobación que el algoritmo devuelve lo esperado:
+        assertArrayEquals(esperado, Res);
+        // Comprobación que factura() devuelve lo esperado:
+        assertEquals(esperadoFactura, MudanzasDinamico.factura(benefKilo, ArrayMatriz.toArrayList(Res)));
+    }
+    //NO PASA TEST
+    @Test
+    public void testListaConPesoNegativo() {
+        int[] pesosA = {10, -5, 15};
+        int pmax = 20;
+        int[] esperado = {15, 5}; // El peso negativo se ignora
+        int esperadoFactura = 120;
+        int benefKilo = 6;
+
+        int[] Res = operaciones(pesosA, pmax);
+
+        // Comprobación que el algoritmo devuelve lo esperado:
+        assertArrayEquals(esperado, Res);
+        // Comprobación que factura() devuelve lo esperado:
+        assertEquals(esperadoFactura, MudanzasDinamico.factura(benefKilo, ArrayMatriz.toArrayList(Res)));
+    }
+    @Test
+    public void testListaConCapacidadCero() {
+        int[] pesosA = {10, 20, 30};
+        int pmax = 0;
+        int[] esperado = {};
+        int esperadoFactura = 0;
+        int benefKilo = 6;
+
+        int[] Res = operaciones(pesosA, pmax);
+
+        // Comprobación que el algoritmo devuelve lo esperado:
+        assertArrayEquals(esperado, Res);
+        // Comprobación que factura() devuelve lo esperado:
+        assertEquals(esperadoFactura, MudanzasDinamico.factura(benefKilo, ArrayMatriz.toArrayList(Res)));
+    }
+    @Test
+    public void testListaConCapacidadMenorQueMinimoPeso() {
+        int[] pesosA = {10, 20, 30};
+        int pmax = 5;
+        int[] esperado = {};
+        int esperadoFactura = 0;
+        int benefKilo = 6;
+
+        int[] Res = operaciones(pesosA, pmax);
+
+        // Comprobación que el algoritmo devuelve lo esperado:
+        assertArrayEquals(esperado, Res);
+        // Comprobación que factura() devuelve lo esperado:
+        assertEquals(esperadoFactura, MudanzasDinamico.factura(benefKilo, ArrayMatriz.toArrayList(Res)));
+    }
 }
 //Domain driven design
