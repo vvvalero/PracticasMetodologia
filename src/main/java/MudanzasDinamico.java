@@ -45,7 +45,7 @@ public class MudanzasDinamico {
             for(int i = 0;i<filas;i++){
                 if(i!=0 && j!=0) {
                     aux=pesos.get(i);//aux es el peso actual
-                    if (j<aux) //si el peso max es menor ponemos lo mismo que en la celda de arriba
+                    if (j<aux) //si el peso max es menor ponemos lo mismo que en la celda de arriba.
                         matriz[i][j]=matriz[i-1][j];
                     else
                         matriz[i][j] = Integer.max(matriz[i - 1][j], beneficio*aux + matriz[i - 1][(j - aux)]);
