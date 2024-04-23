@@ -44,8 +44,8 @@ public class MudanzasDinamico {
         for (int j=0;j<col;j++){
             for(int i = 0;i<filas;i++){
                 if(i!=0 && j!=0) {
-                    aux=pesos.get(i);
-                    if (j<aux)
+                    aux=pesos.get(i);//aux es el peso actual
+                    if (j<aux) //si el peso max es menor ponemos lo mismo que en la celda de arriba
                         matriz[i][j]=matriz[i-1][j];
                     else
                         matriz[i][j] = Integer.max(matriz[i - 1][j], beneficio*aux + matriz[i - 1][(j - aux)]);
@@ -63,19 +63,22 @@ public class MudanzasDinamico {
         int filas = pesos.size();
         int col = pmax+1;
         int aux = matriz[filas-1][col-1];
+        //Inicializamos aux con el ultimo de la matriz
 
         for(int j=col-1;j>=0;j--){
             for (int i=filas-2;i>=0;i--){
-                if(matriz[i][j] < aux && !idPesosCogidos.contains(i+1)){
-                    res.add(pesos.get(i+1));
-                    idPesosCogidos.add(i+1);
+                //empezamos en el 2o empezando por el final
+                if(matriz[i][j] < aux && !idPesosCogidos.contains(i+1)){ //si ya hemos añadido ese objeto (el id) no hacemos nada
                     i=i+1;
-                    if(pesos.get(i)>j)
+                    //añadimos el id y el peso a la solucion
+                    res.add(pesos.get(i));
+                    idPesosCogidos.add(i);
+                    if(pesos.get(i)>j) //si el peso es mayor al peso maximo no lo añadimos
                         j=0;
                     else
                         j=j - pesos.get(i);
                 }
-                aux=matriz[i][j];
+                aux=matriz[i][j]; //aux pasa a ser el actual para ser el anterior al siguiente
             }
         }
         return res;
