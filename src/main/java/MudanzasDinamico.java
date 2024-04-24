@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.security.Provider;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class MudanzasDinamico {
     private static ArrayList<Integer> pesos = new ArrayList<Integer>();
@@ -39,14 +40,20 @@ public class MudanzasDinamico {
         ArrayList<Integer> sol= new ArrayList<>(algoritmoDinamico(pesos,pmax,beneficio));
         logger.info("Solucion: "+sol); //no se si se puede hacer un logger.info(sol) directamente
         logger.info("El beneficio es: "+ factura(beneficio,sol));
-        System.out.println("Solucion: "+sol);
-        System.out.println("El beneficio es: "+ factura(beneficio,sol));
     }
 
 
     //Debera llamar a matrizDecisiones y a sacarPesos
     public static ArrayList<Integer> algoritmoDinamico(ArrayList<Integer> pesos, int pmax,int beneficio){
-        return sacarPesos(pesos,pmax,matrizDecisiones(pesos,pmax,beneficio));
+        int[][] mDecisiones = matrizDecisiones(pesos,pmax,beneficio);
+        logger.info("Matriz de Decisiones calculada en matrizDecisiones():");
+        for (int i=0;i<mDecisiones.length;i++){
+            logger.info(Arrays.toString(mDecisiones[i]));
+        }
+
+        ArrayList<Integer> sol = sacarPesos(pesos,pmax,mDecisiones);
+        logger.info("Pesos calculados en sacarPesos(): \n" + sol);
+        return sol;
     }
     public static int[][] matrizDecisiones(ArrayList<Integer> pesos,int pmax,int beneficio){ //hice debug y funciona
         MetodosAdicionales.eliminarNegativos(pesos);
