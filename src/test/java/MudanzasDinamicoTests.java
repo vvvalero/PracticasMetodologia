@@ -57,10 +57,10 @@ public class MudanzasDinamicoTests {
     @Test
     public void testListaEstandarTres(){
         //Variables a cambiar para modificar el test facilmente
-        int[] pesosA = {3,5,8};
-        int pmax = 10;
-        int[] esperado = {5,3};
-        int esperadoFactura = 48;
+        int[] pesosA = {30,50,80};
+        int pmax = 100;
+        int[] esperado = {50,30};
+        int esperadoFactura = 480;
         int benefKilo = 6;
 
         int[]Res = opTest(pesosA,pmax);
