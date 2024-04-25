@@ -153,7 +153,7 @@ public class MudanzasDinamicoTests {
         // Comprobación que factura() devuelve lo esperado:
         assertEquals(esperadoFactura, MudanzasDinamico.factura(benefKilo, ArrayMatriz.toArrayList(Res)));
     }
-    //NO PASA EL TEST
+
     @Test
     public void testListaConUnSoloElemento() {
         int[] pesosA = {10};
@@ -198,6 +198,25 @@ public class MudanzasDinamicoTests {
         assertArrayEquals(esperado, Res);
         // Comprobación que factura() devuelve lo esperado:
         assertEquals(esperadoFactura, MudanzasDinamico.factura(benefKilo, ArrayMatriz.toArrayList(Res)));
+    }
+    @Test
+    public void testListaPmaxNegativo(){
+        //Variables a cambiar para modificar el test facilmente
+        int[] pesosA = {3,4,3,3,3};
+        int pmax = -9;
+        RuntimeException esperado = new RuntimeException("Peso maximo negativo");
+        int esperadoFactura = 54;
+        int benefKilo = 6;
+
+        try {
+            int[]Res = opTest(pesosA,pmax);
+            //comprobacion que el algoritmo devuelve lo esperado:
+            assertArrayEquals(new int[0], Res);
+            //comprobacion que factura() devuelve lo esperado:
+            assertEquals(esperadoFactura, MudanzasDinamico.factura(benefKilo, ArrayMatriz.toArrayList(Res)));
+        }catch (RuntimeException res){
+            assertEquals(res.getMessage(), esperado.getMessage());
+        }
     }
 
 }

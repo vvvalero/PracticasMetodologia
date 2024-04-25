@@ -41,6 +41,10 @@ public class MudanzasDinamico {
 
     //Debera llamar a matrizDecisiones y a sacarPesos
     public static ArrayList<Integer> algoritmoDinamico(ArrayList<Integer> pesos, int pmax,int beneficio){
+        if(pmax<0) {
+            logger.warn("El peso maximo es negativo");
+            throw new RuntimeException("Peso maximo negativo");
+        }
         int[][] mDecisiones = matrizDecisiones(pesos,pmax,beneficio);
         logger.info("Matriz de Decisiones calculada en matrizDecisiones():");
         for (int i=0;i<mDecisiones.length;i++){
