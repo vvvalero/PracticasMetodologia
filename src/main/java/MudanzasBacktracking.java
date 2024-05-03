@@ -58,6 +58,7 @@ public class MudanzasBacktracking {
                     peso = peso + pesos.get(2);
                     break;
             }
+
         }
         return peso;
     }
