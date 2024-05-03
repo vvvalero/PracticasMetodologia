@@ -46,7 +46,18 @@ public class MudanzasBacktracking {
     private static int verPeso(ArrayList<Integer> pesos){
         int peso = 0;
         for (int i = 0; i < x.size(); i++) {
-            peso += x.indexOf(i) * pesos.get(i);
+            //peso = peso + x.indexOf(i) * pesos.get(i);
+            switch (x.get(i)){
+                case 1:
+                    peso = peso + pesos.get(0);
+                    break;
+                case 2:
+                    peso = peso + pesos.get(1);
+                    break;
+                case 3:
+                    peso = peso + pesos.get(2);
+                    break;
+            }
         }
         return peso;
     }
