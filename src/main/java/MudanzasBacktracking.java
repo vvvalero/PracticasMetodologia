@@ -14,6 +14,10 @@ public class MudanzasBacktracking {
 
 
     public static void main(String[] args) {
+        //LOG4J: Se configura en el fichero src/main/resources/log4j2.xml
+        //Para cambiar el nivel de salida (debug,info,warn,fatal...) cambiar la linea Root level="nivel_deseado"
+
+        //Por defecto usamos info, para hacer debug usar el nivel debug
 
         int[] pesosA = {3,5,8}; //se puede modificar como queramos
         for (int p : pesosA) { //convertir el array a un arraylist
@@ -31,6 +35,9 @@ public class MudanzasBacktracking {
         ArrayList<Integer> sol= new ArrayList<>(Mochila(pesos,0));
         logger.debug(sol);
         logger.debug(pesos);
+        for (int i=0;i<pesos.size();i++) {
+            logger.info("Peso "+pesos.get(i)+" con ID "+i+" puesto en el camion "+sol.get(i));
+        }
     }
 
     public static ArrayList<Integer> Mochila(ArrayList<Integer> pesos,int k) {
