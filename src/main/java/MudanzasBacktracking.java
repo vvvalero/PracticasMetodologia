@@ -9,43 +9,50 @@ public class MudanzasBacktracking {
     private static final Logger logger = LogManager.getLogger(MudanzasBacktracking.class);
     //variables globales
     private static ArrayList<Integer> pesos = new ArrayList<>();
-    static int pmax = 20000; //casos que da el problema
+    static int pmax = 8; //casos que da el problema
     static ArrayList<Integer> x = new ArrayList<>(); //vector solucion, lo he llamado x para seguir el pseudocodigo
 
 
     public static void main(String[] args) {
+
         int[] pesosA = {3,5,8}; //se puede modificar como queramos
         for (int p : pesosA) { //convertir el array a un arraylist
             pesos.add(p);
         }
+        for(int i=0;i<pesos.size();i++){
+            x.add(0);
+        }
+        logger.debug(x);
         if (pmax < 0) {
             logger.warn("El peso maximo es negativo");
             throw new RuntimeException("Peso maximo negativo");
         }
-        int k=0;
-        ArrayList<Integer> sol= new ArrayList<>(Mochila(pesos,k));
+
+        ArrayList<Integer> sol= new ArrayList<>(Mochila(pesos,0));
+        logger.debug(sol);
+        logger.debug(pesos);
     }
 
     public static ArrayList<Integer> Mochila(ArrayList<Integer> pesos,int k) {
         ArrayList<Integer> y = new ArrayList<>();
 
         for (int c=1; c<=3; c++) {
-            x.add(c);
-            if(vivo()){
+            x.set(k,c);
+            if(vivo(k,c)){
                 if(k==pesos.size()-1)
-                    y=x;
+                    return x;
                 else
                     Mochila(pesos,k+1);
             }
         }
         return x;
     }
-    public static boolean vivo(){
-        return (verPeso(pesos) <= pmax);
+    public static boolean vivo(int k,int c){
+        return (verPeso(pesos,k,c) <= pmax);
     }
-    private static int verPeso(ArrayList<Integer> pesos){
+    private static int verPeso(ArrayList<Integer> pesos,int k,int c){
         int peso = 0;
-        for (int i = 0; i < x.size(); i++) {
+        /*for (int i = 0; i < x.size(); i++) {
             //peso = peso + x.indexOf(i) * pesos.get(i);
             switch (x.get(i)){
                 case 1:
@@ -59,7 +66,8 @@ public class MudanzasBacktracking {
                     break;
             }
 
-        }
+        }*/
+        peso = peso + pesos.get(k);
         return peso;
     }
 }
