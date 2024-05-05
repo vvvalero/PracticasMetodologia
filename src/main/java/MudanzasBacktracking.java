@@ -13,7 +13,6 @@ public class MudanzasBacktracking {
     private static ArrayList<Integer> pesos = new ArrayList<>();
     static ArrayList<Integer> y = new ArrayList<>();
 
-
     public static void main(String[] args) {
         //LOG4J: Se configura en el fichero src/main/resources/log4j2.xml
         //Para cambiar el nivel de salida (debug,info,warn,fatal...) cambiar la linea Root level="nivel_deseado"
@@ -34,7 +33,7 @@ public class MudanzasBacktracking {
             throw new RuntimeException("Peso maximo negativo");
         }
 
-        ArrayList<Integer> sol= new ArrayList<>(Mochila(pesos,0,pmax,x));
+        ArrayList<Integer> sol= new ArrayList<>(Mochila(pesos,0,pmax));
         logger.debug("x    : "+sol);
         logger.debug("pesos: "+pesos);
         for (int i=0;i<pesos.size();i++) {
@@ -42,7 +41,7 @@ public class MudanzasBacktracking {
         }
     }
 
-    public static ArrayList<Integer> Mochila(ArrayList<Integer> pesos,int k,int pmax,ArrayList<Integer> x) {
+    public static ArrayList<Integer> Mochila(ArrayList<Integer> pesos,int k,int pmax) {
         //k indica en que peso estamos
         for (int c=1; c<=3; c++) {//c indica el id del camion en el que estaria el peso k
             x.set(k,c);//ponemos c en la posicion k
@@ -52,7 +51,7 @@ public class MudanzasBacktracking {
                     return y;
                 }
                 else
-                    Mochila(pesos,k+1,pmax,x);//pasamos al siguiente peso
+                    Mochila(pesos,k+1,pmax);//pasamos al siguiente peso
             }
         }
         return y;

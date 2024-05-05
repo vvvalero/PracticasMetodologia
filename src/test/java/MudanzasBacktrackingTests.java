@@ -11,7 +11,7 @@ public class MudanzasBacktrackingTests {
             x.add(0);
         }
         //Pasar el resultado del algoritmo de ArrayList<Float> a float[]
-        ArrayList<Integer> res = MudanzasBacktracking.Mochila(pesos,0,pmax,x);
+        ArrayList<Integer> res = MudanzasBacktracking.Mochila(pesos,0,pmax);
         int[] Res = ArrayMatriz.toMatriz(res);
         return Res;
     }
