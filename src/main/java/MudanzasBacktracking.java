@@ -8,7 +8,7 @@ import java.util.Iterator;
 public class MudanzasBacktracking {
     private static final Logger logger = LogManager.getLogger(MudanzasBacktracking.class);
     //variables globales
-    static ArrayList<Integer> x = new ArrayList<>(); //vector solucion, lo he llamado x para seguir el pseudocodigo
+    public static ArrayList<Integer> x = new ArrayList<>(); //vector solucion, lo he llamado x para seguir el pseudocodigo
     static int pmax = 8; //casos que da el problema
     private static ArrayList<Integer> pesos = new ArrayList<>();
     static ArrayList<Integer> y = new ArrayList<>();
@@ -42,6 +42,12 @@ public class MudanzasBacktracking {
     }
 
     public static ArrayList<Integer> Mochila(ArrayList<Integer> pesos,int k,int pmax) {
+        //inicializamos x si no esta
+        if (x.isEmpty())
+            for(int i=0;i<pesos.size();i++){
+                x.add(0);
+            }
+
         //k indica en que peso estamos
         for (int c=1; c<=3; c++) {//c indica el id del camion en el que estaria el peso k
             x.set(k,c);//ponemos c en la posicion k
