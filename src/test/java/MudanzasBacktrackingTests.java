@@ -36,7 +36,7 @@ public class MudanzasBacktrackingTests {
         //Variables a cambiar para modificar el test facilmente
         int[] pesosA = {50,3,8};
         int pmax = 50;
-        int[] esperado = {1,2,2};
+        int[] esperado = {1,3,2};
         int esperadoFactura = 54;
         int benefKilo = 6;
         int[]Res = opTest(pesosA,pmax);
@@ -48,7 +48,7 @@ public class MudanzasBacktrackingTests {
         //Variables a cambiar para modificar el test facilmente
         int[] pesosA = {3,34,3,8,10};
         int pmax = 34;
-        int[] esperado = {3,2,3,3,3};
+        int[] esperado = {1,2,3,3,1};
         int esperadoFactura = 54;
         int benefKilo = 6;
         int[]Res = opTest(pesosA,pmax);

@@ -11,6 +11,7 @@ public class MudanzasBacktracking {
     static ArrayList<Integer> x = new ArrayList<>(); //vector solucion, lo he llamado x para seguir el pseudocodigo
     static int pmax = 8; //casos que da el problema
     private static ArrayList<Integer> pesos = new ArrayList<>();
+    static ArrayList<Integer> y = new ArrayList<>();
 
 
     public static void main(String[] args) {
@@ -42,18 +43,19 @@ public class MudanzasBacktracking {
     }
 
     public static ArrayList<Integer> Mochila(ArrayList<Integer> pesos,int k,int pmax,ArrayList<Integer> x) {
-        ArrayList<Integer> y = new ArrayList<>();
         //k indica en que peso estamos
-        for (int c=1; c<=3; c++) {
+        for (int c=1; c<=3; c++) {//c indica el id del camion en el que estaria el peso k
             x.set(k,c);//ponemos c en la posicion k
             if(vivo(c,x,pmax,pesos)){
-                if(k==pesos.size()-1)
-                    return x;
+                if(k==pesos.size()-1) {
+                    y=(ArrayList<Integer>) x.clone();
+                    return y;
+                }
                 else
                     Mochila(pesos,k+1,pmax,x);//pasamos al siguiente peso
             }
         }
-        return x;
+        return y;
     }
     public static boolean vivo(int c,ArrayList<Integer> x,int pmax,ArrayList<Integer> pesos){
         return (verPeso(pesos,c,x) <= pmax);
