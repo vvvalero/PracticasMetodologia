@@ -8,9 +8,9 @@ import java.util.Iterator;
 public class MudanzasBacktracking {
     private static final Logger logger = LogManager.getLogger(MudanzasBacktracking.class);
     //variables globales
-    private static ArrayList<Integer> pesos = new ArrayList<>();
-    static int pmax = 8; //casos que da el problema
     static ArrayList<Integer> x = new ArrayList<>(); //vector solucion, lo he llamado x para seguir el pseudocodigo
+    static int pmax = 8; //casos que da el problema
+    private static ArrayList<Integer> pesos = new ArrayList<>();
 
 
     public static void main(String[] args) {
@@ -18,6 +18,7 @@ public class MudanzasBacktracking {
         //Para cambiar el nivel de salida (debug,info,warn,fatal...) cambiar la linea Root level="nivel_deseado"
 
         //Por defecto usamos info, para hacer debug usar el nivel debug
+
 
         int[] pesosA = {3,5,8}; //se puede modificar como queramos
         for (int p : pesosA) { //convertir el array a un arraylist
@@ -32,7 +33,7 @@ public class MudanzasBacktracking {
             throw new RuntimeException("Peso maximo negativo");
         }
 
-        ArrayList<Integer> sol= new ArrayList<>(Mochila(pesos,0));
+        ArrayList<Integer> sol= new ArrayList<>(Mochila(pesos,0,pmax,x));
         logger.debug(sol);
         logger.debug(pesos);
         for (int i=0;i<pesos.size();i++) {
@@ -40,21 +41,21 @@ public class MudanzasBacktracking {
         }
     }
 
-    public static ArrayList<Integer> Mochila(ArrayList<Integer> pesos,int k) {
+    public static ArrayList<Integer> Mochila(ArrayList<Integer> pesos,int k,int pmax,ArrayList<Integer> x) {
         ArrayList<Integer> y = new ArrayList<>();
 
         for (int c=1; c<=3; c++) {
             x.set(k,c);
-            if(vivo(k,c)){
+            if(vivo(k,c,pmax,pesos)){
                 if(k==pesos.size()-1)
                     return x;
                 else
-                    Mochila(pesos,k+1);
+                    Mochila(pesos,k+1,pmax,x);
             }
         }
         return x;
     }
-    public static boolean vivo(int k,int c){
+    public static boolean vivo(int k,int c,int pmax,ArrayList<Integer> pesos){
         return (verPeso(pesos,k,c) <= pmax);
     }
     private static int verPeso(ArrayList<Integer> pesos,int k,int c){
