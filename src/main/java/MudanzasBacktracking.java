@@ -34,8 +34,8 @@ public class MudanzasBacktracking {
         }
 
         ArrayList<Integer> sol= new ArrayList<>(Mochila(pesos,0,pmax,x));
-        logger.debug(sol);
-        logger.debug(pesos);
+        logger.debug("x    : "+sol);
+        logger.debug("pesos: "+pesos);
         for (int i=0;i<pesos.size();i++) {
             logger.info("Peso "+pesos.get(i)+" con ID "+i+" puesto en el camion "+sol.get(i));
         }
@@ -43,22 +43,22 @@ public class MudanzasBacktracking {
 
     public static ArrayList<Integer> Mochila(ArrayList<Integer> pesos,int k,int pmax,ArrayList<Integer> x) {
         ArrayList<Integer> y = new ArrayList<>();
-
+        //k indica en que peso estamos
         for (int c=1; c<=3; c++) {
-            x.set(k,c);
-            if(vivo(k,c,pmax,pesos)){
+            x.set(k,c);//ponemos c en la posicion k
+            if(vivo(c,x,pmax,pesos)){
                 if(k==pesos.size()-1)
                     return x;
                 else
-                    Mochila(pesos,k+1,pmax,x);
+                    Mochila(pesos,k+1,pmax,x);//pasamos al siguiente peso
             }
         }
         return x;
     }
-    public static boolean vivo(int k,int c,int pmax,ArrayList<Integer> pesos){
-        return (verPeso(pesos,k,c) <= pmax);
+    public static boolean vivo(int c,ArrayList<Integer> x,int pmax,ArrayList<Integer> pesos){
+        return (verPeso(pesos,c,x) <= pmax);
     }
-    private static int verPeso(ArrayList<Integer> pesos,int k,int c){
+    private static int verPeso(ArrayList<Integer> pesos,int c,ArrayList<Integer> x){
         int peso = 0;
         /*for (int i = 0; i < x.size(); i++) {
             //peso = peso + x.indexOf(i) * pesos.get(i);
@@ -75,7 +75,10 @@ public class MudanzasBacktracking {
             }
 
         }*/
-        peso = peso + pesos.get(k);
+        for (int i=0;i<x.size();i++) {
+            if (x.get(i) == c)
+                peso = peso + pesos.get(i);
+        }
         return peso;
     }
 }

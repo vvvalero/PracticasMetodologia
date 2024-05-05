@@ -36,14 +36,12 @@ public class MudanzasBacktrackingTests {
         //Variables a cambiar para modificar el test facilmente
         int[] pesosA = {50,3,8};
         int pmax = 50;
-        int[] esperado = {3,1,1};
+        int[] esperado = {1,2,2};
         int esperadoFactura = 54;
         int benefKilo = 6;
         int[]Res = opTest(pesosA,pmax);
         //comprobacion que el algoritmo devuelve lo esperado:
         assertArrayEquals(esperado, Res);
-        //comprobacion que factura() devuelve lo esperado:
-        //assertEquals(esperadoFactura, MudanzasDinamico.factura(benefKilo,ArrayMatriz.toArrayList(Res)));
     }
     @Test
     public void testListaEstandar3(){
@@ -56,21 +54,17 @@ public class MudanzasBacktrackingTests {
         int[]Res = opTest(pesosA,pmax);
         //comprobacion que el algoritmo devuelve lo esperado:
         assertArrayEquals(esperado, Res);
-        //comprobacion que factura() devuelve lo esperado:
-        //assertEquals(esperadoFactura, MudanzasDinamico.factura(benefKilo,ArrayMatriz.toArrayList(Res)));
     }
     @Test
     public void testListaNoCabe(){
         //Variables a cambiar para modificar el test facilmente
         int[] pesosA = {34,34,34,2};
         int pmax = 34;
-        int[] esperado = {}; //TBD
+        int[] esperado = {}; //PorHacer
         int esperadoFactura = 54;
         int benefKilo = 6;
         int[]Res = opTest(pesosA,pmax);
         //comprobacion que el algoritmo devuelve lo esperado:
         assertArrayEquals(esperado, Res);
-        //comprobacion que factura() devuelve lo esperado:
-        //assertEquals(esperadoFactura, MudanzasDinamico.factura(benefKilo,ArrayMatriz.toArrayList(Res)));
     }
 }
