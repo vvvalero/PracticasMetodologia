@@ -40,7 +40,7 @@ public class MudanzasBacktracking {
             logger.info("Peso "+pesos.get(i)+" con ID "+i+" puesto en el camion "+sol.get(i));
         }
     }
-    public static ArrayList<Integer> vaciarX(){
+    public static ArrayList<Integer> vaciar(){
         x.clear();
         y.clear();
         return x;
