@@ -63,25 +63,10 @@ public class MudanzasBacktracking {
         return y;
     }
     public static boolean vivo(int c,ArrayList<Integer> x,int pmax,ArrayList<Integer> pesos){
-        return (verPeso(pesos,c,x) <= pmax);
+        return (verPeso(pesos,c) <= pmax);
     }
-    private static int verPeso(ArrayList<Integer> pesos,int c,ArrayList<Integer> x){
+    private static int verPeso(ArrayList<Integer> pesos,int c){
         int peso = 0;
-        /*for (int i = 0; i < x.size(); i++) {
-            //peso = peso + x.indexOf(i) * pesos.get(i);
-            switch (x.get(i)){
-                case 1:
-                    peso = peso + pesos.get(0);
-                    break;
-                case 2:
-                    peso = peso + pesos.get(1);
-                    break;
-                case 3:
-                    peso = peso + pesos.get(2);
-                    break;
-            }
-
-        }*/
         for (int i=0;i<x.size();i++) {
             if (x.get(i) == c)
                 peso = peso + pesos.get(i);
