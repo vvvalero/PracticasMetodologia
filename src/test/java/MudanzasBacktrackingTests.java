@@ -89,4 +89,5 @@ public class MudanzasBacktrackingTests {
         //comprobacion que el algoritmo devuelve lo esperado:
         assertArrayEquals(esperado, Res);
     }
+
 }
