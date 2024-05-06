@@ -40,7 +40,10 @@ public class MudanzasBacktracking {
             logger.info("Peso "+pesos.get(i)+" con ID "+i+" puesto en el camion "+sol.get(i));
         }
     }
-
+    public static ArrayList<Integer> vaciarX(){
+        x.clear();
+        return x;
+    }
     public static ArrayList<Integer> Mochila(ArrayList<Integer> pesos,int k,int pmax) {
         //inicializamos x si no esta
         if (x.isEmpty())
