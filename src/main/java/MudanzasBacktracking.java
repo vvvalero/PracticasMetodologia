@@ -42,6 +42,7 @@ public class MudanzasBacktracking {
     }
     public static ArrayList<Integer> vaciarX(){
         x.clear();
+        y.clear();
         return x;
     }
     public static ArrayList<Integer> Mochila(ArrayList<Integer> pesos,int k,int pmax) {

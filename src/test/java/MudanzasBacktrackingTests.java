@@ -8,7 +8,7 @@ public class MudanzasBacktrackingTests {
     public int[] opTest(int[] pesosA, int pmax){
         //Pasar de float[] a ArrayList[Float] para la entrada de voraz()
         ArrayList<Integer> pesos = ArrayMatriz.toArrayList(pesosA);
-        //vaciar x para que no haya problemas con los tests
+        //vaciar X e Y para que no haya problemas con los tests
         MudanzasBacktracking.vaciarX();
         //Pasar el resultado del algoritmo de ArrayList<Float> a float[]
         ArrayList<Integer> res = MudanzasBacktracking.Mochila(pesos,0,pmax);
