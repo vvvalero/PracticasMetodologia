@@ -51,7 +51,7 @@ public class MudanzasBacktracking {
         //k indica en que peso estamos
         for (int c=1; c<=3; c++) {//c indica el id del camion en el que estaria el peso k
             x.set(k,c);//ponemos c en la posicion k
-            if(vivo(c,x,pmax,pesos)){
+            if(vivo(c,pmax,pesos)){
                 if(k==pesos.size()-1) {
                     y=(ArrayList<Integer>) x.clone();
                     return y;
@@ -62,7 +62,7 @@ public class MudanzasBacktracking {
         }
         return y;
     }
-    public static boolean vivo(int c,ArrayList<Integer> x,int pmax,ArrayList<Integer> pesos){
+    public static boolean vivo(int c,int pmax,ArrayList<Integer> pesos){
         return (verPeso(pesos,c) <= pmax);
     }
     private static int verPeso(ArrayList<Integer> pesos,int c){
