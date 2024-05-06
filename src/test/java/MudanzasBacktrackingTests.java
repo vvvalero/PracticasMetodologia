@@ -59,4 +59,34 @@ public class MudanzasBacktrackingTests {
         //comprobacion que el algoritmo devuelve lo esperado:
         assertArrayEquals(esperado, Res);
     }
+    @Test
+    public void testListaEstandar4(){
+        //Variables a cambiar para modificar el test facilmente
+        int[] pesosA = {28,4,1};
+        int pmax = 34;
+        int[] esperado = {3,3,1};
+        int[]Res = opTest(pesosA,pmax);
+        //comprobacion que el algoritmo devuelve lo esperado:
+        assertArrayEquals(esperado, Res);
+    }
+    @Test
+    public void testListaLlenarTodos(){
+        //Variables a cambiar para modificar el test facilmente
+        int[] pesosA = {28,6,30,4,26,8};
+        int pmax = 34;
+        int[] esperado = {2,2,1,1,3,3};
+        int[]Res = opTest(pesosA,pmax);
+        //comprobacion que el algoritmo devuelve lo esperado:
+        assertArrayEquals(esperado, Res);
+    }
+    @Test
+    public void testListaConNegativos(){
+        //Variables a cambiar para modificar el test facilmente
+        int[] pesosA = {-1,-2,-4,34};
+        int pmax = 34;
+        int[] esperado = {1};
+        int[]Res = opTest(pesosA,pmax);
+        //comprobacion que el algoritmo devuelve lo esperado:
+        assertArrayEquals(esperado, Res);
+    }
 }

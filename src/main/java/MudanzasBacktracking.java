@@ -34,8 +34,8 @@ public class MudanzasBacktracking {
         }
 
         ArrayList<Integer> sol= new ArrayList<>(Mochila(pesos,0,pmax));
-        logger.debug("x    : "+sol);
-        logger.debug("pesos: "+pesos);
+        logger.info("x    : "+sol);
+        logger.info("pesos: "+pesos);
         for (int i=0;i<pesos.size();i++) {
             logger.info("Peso "+pesos.get(i)+" con ID "+i+" puesto en el camion "+sol.get(i));
         }
@@ -48,10 +48,12 @@ public class MudanzasBacktracking {
     public static ArrayList<Integer> Mochila(ArrayList<Integer> pesos,int k,int pmax) {
         MetodosAdicionales.eliminarNegativos(pesos);
         //inicializamos x si no esta
+        MetodosAdicionales.eliminarNegativos(pesos);
         if (x.isEmpty())
             for(int i=0;i<pesos.size();i++){
                 x.add(0);
             }
+
 
         //k indica en que peso estamos
         for (int c=1; c<=3; c++) {//c indica el id del camion en el que estaria el peso k
