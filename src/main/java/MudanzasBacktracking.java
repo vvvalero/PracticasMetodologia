@@ -20,7 +20,7 @@ public class MudanzasBacktracking {
         //Por defecto usamos info, para hacer debug usar el nivel debug
 
 
-        int[] pesosA = {3,5,8}; //se puede modificar como queramos
+        int[] pesosA = {}; //se puede modificar como queramos
         for (int p : pesosA) { //convertir el array a un arraylist
             pesos.add(p);
         }
@@ -28,11 +28,7 @@ public class MudanzasBacktracking {
             x.add(0);
         }
         logger.debug(x);
-        if (pmax < 0) {
-            logger.warn("El peso maximo es negativo");
-            throw new RuntimeException("Peso maximo negativo");
-        }
-
+        depurarErrores();
         ArrayList<Integer> sol= new ArrayList<>(Mochila(pesos,0,pmax));
         logger.debug("x    : "+sol);
         logger.debug("pesos: "+pesos);
@@ -78,5 +74,15 @@ public class MudanzasBacktracking {
                 peso = peso + pesos.get(i);
         }
         return peso;
+    }
+    public static void depurarErrores(){
+        if (pmax < 0) {
+            logger.warn("El peso maximo es negativo");
+            throw new RuntimeException("Peso maximo negativo");
+        }
+        if(pesos.isEmpty()){
+            logger.warn("No hay pesos");
+            throw new RuntimeException("No hay pesos");
+        }
     }
 }
