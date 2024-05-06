@@ -46,6 +46,7 @@ public class MudanzasBacktracking {
         return x;
     }
     public static ArrayList<Integer> Mochila(ArrayList<Integer> pesos,int k,int pmax) {
+        MetodosAdicionales.eliminarNegativos(pesos);
         //inicializamos x si no esta
         if (x.isEmpty())
             for(int i=0;i<pesos.size();i++){
