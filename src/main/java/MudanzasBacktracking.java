@@ -34,8 +34,8 @@ public class MudanzasBacktracking {
         }
 
         ArrayList<Integer> sol= new ArrayList<>(Mochila(pesos,0,pmax));
-        logger.info("x    : "+sol);
-        logger.info("pesos: "+pesos);
+        logger.debug("x    : "+sol);
+        logger.debug("pesos: "+pesos);
         for (int i=0;i<pesos.size();i++) {
             logger.info("Peso "+pesos.get(i)+" con ID "+i+" puesto en el camion "+sol.get(i));
         }
