@@ -89,5 +89,27 @@ public class MudanzasBacktrackingTests {
         //comprobacion que el algoritmo devuelve lo esperado:
         assertArrayEquals(esperado, Res);
     }
+    @Test
+    public void testListaPmaxNegativo(){
+        //Variables a cambiar para modificar el test facilmente
+        int[] pesosA = {3,4,3,3,3};
+        int pmax = -9;
+        RuntimeException esperado = new RuntimeException("Peso maximo negativo");
+        try {
+        }catch (RuntimeException res){
+            assertEquals(res.getMessage(), esperado.getMessage());
+        }
+    }
+    @Test
+    public void testListaSinNingunPeso(){
+        //Variables a cambiar para modificar el test facilmente
+        int[] pesosA = {};
+        int pmax = 10;
+        RuntimeException esperado = new RuntimeException("No hay pesos");
+        try {
+        }catch (RuntimeException res){
+            assertEquals(res.getMessage(), esperado.getMessage());
+        }
+    }
 
 }
