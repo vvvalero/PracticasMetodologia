@@ -111,5 +111,25 @@ public class MudanzasBacktrackingTests {
             assertEquals(res.getMessage(), esperado.getMessage());
         }
     }
+    @Test
+    public void testListaUnoMayor(){
+        //Variables a cambiar para modificar el test facilmente
+        int[] pesosA = {40};
+        int pmax = 34;
+        int[] esperado = {};
+        int[]Res = opTest(pesosA,pmax);
+        //comprobacion que el algoritmo devuelve lo esperado:
+        assertArrayEquals(esperado, Res);
+    }
+    @Test
+    public void testListaTodosMayor(){
+        //Variables a cambiar para modificar el test facilmente
+        int[] pesosA = {35,40,42,50};
+        int pmax = 34;
+        int[] esperado = {};
+        int[]Res = opTest(pesosA,pmax);
+        //comprobacion que el algoritmo devuelve lo esperado:
+        assertArrayEquals(esperado, Res);
+    }
 
 }

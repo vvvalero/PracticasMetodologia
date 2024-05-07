@@ -9,7 +9,7 @@ public class MudanzasBacktracking {
     private static final Logger logger = LogManager.getLogger(MudanzasBacktracking.class);
     //variables globales
     public static ArrayList<Integer> x = new ArrayList<>(); //vector solucion, lo he llamado x para seguir el pseudocodigo
-    static int pmax = 8; //casos que da el problema
+    static int pmax = 100; //casos que da el problema
     private static ArrayList<Integer> pesos = new ArrayList<>();
     static ArrayList<Integer> y = new ArrayList<>();
 
@@ -20,7 +20,7 @@ public class MudanzasBacktracking {
         //Por defecto usamos info, para hacer debug usar el nivel debug
 
 
-        int[] pesosA = {}; //se puede modificar como queramos
+        int[] pesosA = {110,101,312}; //se puede modificar como queramos
         for (int p : pesosA) { //convertir el array a un arraylist
             pesos.add(p);
         }
@@ -32,9 +32,12 @@ public class MudanzasBacktracking {
         ArrayList<Integer> sol= new ArrayList<>(Mochila(pesos,0,pmax));
         logger.debug("x    : "+sol);
         logger.debug("pesos: "+pesos);
-        for (int i=0;i<pesos.size();i++) {
-            logger.info("Peso "+pesos.get(i)+" con ID "+i+" puesto en el camion "+sol.get(i));
-        }
+        if(!sol.isEmpty())
+            for (int i=0;i<pesos.size();i++) {
+                logger.info("Peso "+pesos.get(i)+" con ID "+i+" puesto en el camion "+sol.get(i));
+            }
+        else
+            logger.info("No se ha podido realizar la mudanza");
     }
     public static ArrayList<Integer> vaciar(){
         x.clear();
