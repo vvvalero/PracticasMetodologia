@@ -36,7 +36,7 @@ public class MudanzasBacktracking {
             for (int i=0;i<pesos.size();i++) {
                 logger.info("Peso "+pesos.get(i)+" con ID "+i+" puesto en el camion "+sol.get(i));
             }
-            x=(ArrayList<Integer>)y.clone();
+            x=(ArrayList<Integer>)y.clone();//como es en Y donde tenemos la sol pero verPeso usa X, copiamos Y a X
             for (int i=1;i<=3;i++){
                 logger.info("El camion "+i+" tiene "+verPeso(pesos,i)+" Kg");
             }
@@ -44,20 +44,21 @@ public class MudanzasBacktracking {
         else
             logger.info("No se ha podido realizar la mudanza");
     }
+
+    //Vaciar x e y para poder hacer todos los tests en la misma ejecucion
+    //Porque al ser globales se queda el resultado del test anterior y da error
     public static ArrayList<Integer> vaciar(){
         x.clear();
         y.clear();
         return x;
     }
     public static ArrayList<Integer> Mochila(ArrayList<Integer> pesos,int k,int pmax) {
-        //inicializamos x si no esta
         MetodosAdicionales.eliminarNegativos(pesos);
+        //inicializamos x si no esta
         if (x.isEmpty())
             for(int i=0;i<pesos.size();i++){
                 x.add(0);
             }
-
-
         //k indica en que peso estamos
         for (int c=1; c<=3; c++) {//c indica el id del camion en el que estaria el peso k
             x.set(k,c);//ponemos c en la posicion k
