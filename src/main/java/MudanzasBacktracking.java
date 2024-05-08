@@ -20,7 +20,7 @@ public class MudanzasBacktracking {
         //Por defecto usamos info, para hacer debug usar el nivel debug
 
 
-        int[] pesosA = {110,101,312}; //se puede modificar como queramos
+        int[] pesosA = {110,101,312,101,202}; //se puede modificar como queramos
         for (int p : pesosA) { //convertir el array a un arraylist
             pesos.add(p);
         }
@@ -36,6 +36,7 @@ public class MudanzasBacktracking {
             for (int i=0;i<pesos.size();i++) {
                 logger.info("Peso "+pesos.get(i)+" con ID "+i+" puesto en el camion "+sol.get(i));
             }
+            x=(ArrayList<Integer>)y.clone();
             for (int i=1;i<=pesos.size();i++){
                 logger.info("El camion "+i+" tiene "+verPeso(pesos,i)+" Kg");
             }
