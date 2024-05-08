@@ -37,7 +37,7 @@ public class MudanzasBacktracking {
                 logger.info("Peso "+pesos.get(i)+" con ID "+i+" puesto en el camion "+sol.get(i));
             }
             x=(ArrayList<Integer>)y.clone();
-            for (int i=1;i<=pesos.size();i++){
+            for (int i=1;i<=3;i++){
                 logger.info("El camion "+i+" tiene "+verPeso(pesos,i)+" Kg");
             }
         }
