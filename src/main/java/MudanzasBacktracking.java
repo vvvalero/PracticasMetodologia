@@ -9,7 +9,7 @@ public class MudanzasBacktracking {
     private static final Logger logger = LogManager.getLogger(MudanzasBacktracking.class);
     //variables globales
     public static ArrayList<Integer> x = new ArrayList<>(); //vector solucion, lo he llamado x para seguir el pseudocodigo
-    static int pmax = 100; //casos que da el problema
+    static int pmax = 313; //casos que da el problema
     private static ArrayList<Integer> pesos = new ArrayList<>();
     static ArrayList<Integer> y = new ArrayList<>();
 
@@ -32,10 +32,14 @@ public class MudanzasBacktracking {
         ArrayList<Integer> sol= new ArrayList<>(Mochila(pesos,0,pmax));
         logger.debug("x    : "+sol);
         logger.debug("pesos: "+pesos);
-        if(!sol.isEmpty())
+        if(!sol.isEmpty()){
             for (int i=0;i<pesos.size();i++) {
                 logger.info("Peso "+pesos.get(i)+" con ID "+i+" puesto en el camion "+sol.get(i));
             }
+            for (int i=1;i<=pesos.size();i++){
+                logger.info("El camion "+i+" tiene "+verPeso(pesos,i)+" Kg");
+            }
+        }
         else
             logger.info("No se ha podido realizar la mudanza");
     }
