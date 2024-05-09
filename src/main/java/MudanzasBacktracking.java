@@ -2,8 +2,6 @@ import MetodosAdicionales.MetodosAdicionales;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
 
 public class MudanzasBacktracking {
     private static final Logger logger = LogManager.getLogger(MudanzasBacktracking.class);
