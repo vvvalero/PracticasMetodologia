@@ -17,18 +17,7 @@ public class MudanzasDinamico {
     };
 
     public static void main(String[] args) {
-        // Tests para log4j. Se configura en el fichero src/main/resources/log4j2.xml
-        // https://logging.apache.org/log4j/2.x/manual/configuration.html
-/*
-        Logger logger = LogManager.getLogger(MudanzasDinamico.class);
-        logger.trace("Mensaje TRACE: Muy detallado, ideal para diagnóstico fino");
-        logger.debug("Mensaje DEBUG: Detalles de depuración, útil durante el desarrollo");
-        logger.info("Mensaje INFO: Información general sobre el flujo de la aplicación");
-        logger.warn("Mensaje WARN: Advertencia sobre algo inusual, pero no crítico");
-        logger.error("Mensaje ERROR: Error en la ejecución que debe ser investigado");
-        logger.fatal("Mensaje FATAL: Error crítico que probablemente aborte la aplicación");*/
-
-        int pmax = 10,beneficio = 6; //casos que da el problema
+        int pmax = 15,beneficio = 6; //casos que da el problema
         int[] pesosA = {3,5,8}; //se puede modificar como queramos
         for (int p : pesosA) { //convertir el array a un arraylist
             pesos.add(p);
