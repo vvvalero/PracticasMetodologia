@@ -40,7 +40,7 @@ public class MudanzasBacktracking {
             }
         }
         else
-            logger.info("No se ha podido realizar la mudanza");
+            logger.info("No se ha podido realizar la mudanza,hacen falta mas camiones");
     }
 
     //Vaciar x e y para poder hacer todos los tests en la misma ejecucion
