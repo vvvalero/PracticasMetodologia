@@ -22,11 +22,11 @@ public class MudanzasBacktracking {
         for (int p : pesosA) { //convertir el array a un arraylist
             pesos.add(p);
         }
-        for(int i=0;i<pesos.size();i++){
+        for(int i=0;i<pesos.size();i++){ //inicializamos x a 0 con el numero de pesos que haya
             x.add(0);
         }
         logger.debug(x);
-        depurarErrores();
+        depurarErrores(); //comprobamos que no haya errores en los datos de entrada
         ArrayList<Integer> sol= new ArrayList<>(Mochila(pesos,0,pmax));
         logger.debug("x    : "+sol);
         logger.debug("pesos: "+pesos);
@@ -74,7 +74,7 @@ public class MudanzasBacktracking {
     public static boolean vivo(int c,int pmax,ArrayList<Integer> pesos){
         return (verPeso(pesos,c) <= pmax);
     }
-    private static int verPeso(ArrayList<Integer> pesos,int c){
+    private static int verPeso(ArrayList<Integer> pesos,int c){ //comprobar el peso de un camion c
         int peso = 0;
         for (int i=0;i<x.size();i++) {
             if (x.get(i) == c)
