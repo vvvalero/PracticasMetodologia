@@ -131,5 +131,15 @@ public class MudanzasBacktrackingTests {
         //comprobacion que el algoritmo devuelve lo esperado:
         assertArrayEquals(esperado, Res);
     }
+    @Test
+    public void testListaPmaxEsCero(){
+        //Variables a cambiar para modificar el test facilmente
+        int[] pesosA = {35,40,42,50};
+        int pmax = 0;
+        int[] esperado = {};
+        int[]Res = opTest(pesosA,pmax);
+        //comprobacion que el algoritmo devuelve lo esperado:
+        assertArrayEquals(esperado, Res);
+    }
 
 }
