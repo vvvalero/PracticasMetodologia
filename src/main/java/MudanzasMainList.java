@@ -1,38 +1,16 @@
 import java.util.*;
 
 public class MudanzasMainList {
-
-    //OPCION DE USO DEL PROGRAMA CON SCANNER
-
-    private static Scanner scanner = new Scanner(System.in);
-
-    public static float dameEspacioCamion(){
-        System.out.println("Introduzca peso máximo que se podrá cargar en el camión: ");
-        return scanner.nextFloat();
-    }
-    public static ArrayList<Float> dameObjetos(){
-        ArrayList<Float> objetos = new ArrayList<>();
-        float n=0;
-        System.out.println("Introduzca el peso individual de cada objeto que se quiere introducir, escribir 0 para salir: ");
-        do{
-            n = scanner.nextFloat();
-            if(n!=0)
-                objetos.add(n);
-        }while(n!=0);
-
-        return objetos;
-    }
-
     public static float factura(int tam,float precio){
         return tam*precio;
     }
     public static void main(String[] args) {
         ArrayList<Float> objetos = new ArrayList<>();
-        float espacio = 0;
-
-        //PARA USAR SCANNER DESCOMENTAR
-        //espacio = dameEspacioCamion();
-        //objetos = dameObjetos();
+        float[] pesosA = {3,5,8,2}; //se puede modificar como queramos
+        for (float p : pesosA) { //convertir el array a un arraylist
+            objetos.add(p);
+        }
+        float espacio = 10, beneficio = 40;
 
         if(espacio<0){
             System.out.println("Error. Capacidad negativa. Terminando ejecución del programa.");
@@ -41,7 +19,7 @@ public class MudanzasMainList {
         System.out.println("Peso de los objetos que se quieren cargar en el camión: " + objetos);
         ArrayList<Float> sol = voraz(objetos,espacio);
         System.out.println("Peso de los objetos que van a ser transportados: " + sol);
-        System.out.println("Factura montante: " + factura(sol.size(),40));
+        System.out.println("Factura montante: " + factura(sol.size(),beneficio));
     }
 
     public static void eliminarNegativos(ArrayList<Float> pesos){
