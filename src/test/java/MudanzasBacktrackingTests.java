@@ -70,6 +70,16 @@ public class MudanzasBacktrackingTests {
         assertArrayEquals(esperado, Res);
     }
     @Test
+    public void testListaCasoProblema(){
+        //Variables a cambiar para modificar el test facilmente
+        int[] pesosA = {5000,1500,15000,15000,20000,1000,428};
+        int pmax = 20000;
+        int[] esperado = {1, 2, 1, 2, 3, 2, 2};
+        int[]Res = opTest(pesosA,pmax);
+        //comprobacion que el algoritmo devuelve lo esperado:
+        assertArrayEquals(esperado, Res);
+    }
+    @Test
     public void testListaLlenarTodos(){
         //Variables a cambiar para modificar el test facilmente
         int[] pesosA = {28,6,30,4,26,8};

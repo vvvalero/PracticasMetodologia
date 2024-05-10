@@ -7,7 +7,7 @@ public class MudanzasBacktracking {
     private static final Logger logger = LogManager.getLogger(MudanzasBacktracking.class);
     //variables globales
     public static ArrayList<Integer> x = new ArrayList<>(); //vector solucion, lo he llamado x para seguir el pseudocodigo
-    static int pmax = 313; //casos que da el problema
+    static int pmax = 20000; //peso máximo por camion
     private static ArrayList<Integer> pesos = new ArrayList<>();
     static ArrayList<Integer> y = new ArrayList<>();
 
@@ -18,7 +18,7 @@ public class MudanzasBacktracking {
         //Por defecto usamos info, para hacer debug usar el nivel debug
 
 
-        int[] pesosA = {110,101,312,101,202}; //se puede modificar como queramos
+        int[] pesosA = {5000,1500,15000,15000,20000,1000,428}; //se puede modificar como queramos,la suma es 5979
         for (int p : pesosA) { //convertir el array a un arraylist
             pesos.add(p);
         }
